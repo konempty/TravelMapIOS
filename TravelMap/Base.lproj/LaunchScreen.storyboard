@@ -1,20 +1,60 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BMJUA_otf.otf">
+            <string>BMJUAOTF</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="te0-Gv-RIR">
+                                <rect key="frame" x="0.0" y="450.5" width="414" height="5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="gtn-JL-iwu"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH6-3e-Uxt">
+                                <rect key="frame" x="0.0" y="450.5" width="414" height="50"/>
+                                <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_launcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="YGi-9X-jfv">
+                                <rect key="frame" x="145" y="326.5" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YGi-9X-jfv" secondAttribute="height" id="6Y1-9j-uHm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="yH6-3e-Uxt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BSA-3X-B3R"/>
+                            <constraint firstItem="yH6-3e-Uxt" firstAttribute="top" secondItem="YGi-9X-jfv" secondAttribute="bottom" id="CxS-sc-Dae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="te0-Gv-RIR" secondAttribute="trailing" id="IxS-0C-9cS"/>
+                            <constraint firstItem="te0-Gv-RIR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xdz-5N-cze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yH6-3e-Uxt" secondAttribute="trailing" id="e6W-2A-7Ka"/>
+                            <constraint firstItem="YGi-9X-jfv" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="hwa-fd-1jK"/>
+                            <constraint firstItem="te0-Gv-RIR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oKU-Ps-ZEm"/>
+                            <constraint firstItem="YGi-9X-jfv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qkC-E6-b8Z"/>
+                            <constraint firstItem="te0-Gv-RIR" firstAttribute="top" secondItem="YGi-9X-jfv" secondAttribute="bottom" id="x9R-hx-TXv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +62,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_launcher.png" width="512" height="512"/>
+        <namedColor name="dark">
+            <color red="0.14117647058823529" green="0.16078431372549021" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AlbumViewCell:UICollectionViewCell{
-    
+class AlbumViewCell: UICollectionViewCell {
+
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var albumName: UILabel!
 }

@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0AB673270FED7E0016D530 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AB672270FED7E0016D530 /* PhotoService.swift */; };
+		AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AB674270FEEDA0016D530 /* DBData.swift */; };
 		AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */; };
 		AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AF2847B7270DE331003C0B16 /* SwiftyJSON */; };
+		AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */; };
+		AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */; };
+		AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = AF69CBB2270EC82A00F92788 /* ic_launcher.png */; };
+		AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */; };
+		AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */; };
 		AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */; };
 		AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F835270D4D6C001B1C5C /* Alamofire */; };
 		AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F838270D4E82001B1C5C /* FirebaseAuth */; };
+		AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */; };
+		AFEB1C5727107E1E008D26B4 /* ImageScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = AFEB1C5627107E1E008D26B4 /* ImageScrollView */; };
 		D0FF61CF5341C9D25B7573F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */; };
 		D0FF627DEBFEA67969ED8701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6C5CE4381A4CCBD373A7 /* LaunchScreen.storyboard */; };
 		D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */; };
@@ -24,12 +33,21 @@
 		D0FF6A32958F37A6ACC8C952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6D7FE5EBD90CA9AB1F9E /* Main.storyboard */; };
 		D0FF6A98C94D43C6D6D06641 /* TravelMap.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */; };
 		D0FF6ADF47670834DD00F732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6F09A62AC67B7B81C94E /* Main.storyboard */; };
+		D0FF6B9EEE417AEFA36F1C0B /* BMJUA_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */; };
 		D0FF6D893C9FC7468D976755 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6340C551E55CBDE543D3 /* AlbumViewController.swift */; };
 		D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF0AB672270FED7E0016D530 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		AF0AB674270FEEDA0016D530 /* DBData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBData.swift; sourceTree = "<group>"; };
 		AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
+		AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeReusableView.swift; sourceTree = "<group>"; };
+		AF69CBB2270EC82A00F92788 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListTableViewCell.swift; sourceTree = "<group>"; };
+		AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewController.swift; sourceTree = "<group>"; };
+		AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0FF618743DBE3E4B7BB7E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		D0FF6192A55330F037324B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +59,7 @@
 		D0FF6AA893835BAA913A558A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TravelMap.entitlements; sourceTree = "<group>"; };
 		D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = BMJUA_otf.otf; sourceTree = "<group>"; };
 		D0FF6B62093C2C424D3E9A56 /* DailyPhotoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyPhotoListViewController.swift; sourceTree = "<group>"; };
 		D0FF6BF4D1C47202CEBB372E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +76,7 @@
 				AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */,
 				AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */,
 				AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */,
+				AFEB1C5727107E1E008D26B4 /* ImageScrollView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +86,7 @@
 		D0FF66134C63B78EF0FEB6A1 /* TravelMap */ = {
 			isa = PBXGroup;
 			children = (
+				AF69CBB2270EC82A00F92788 /* ic_launcher.png */,
 				D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */,
 				D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */,
 				D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */,
@@ -81,6 +102,14 @@
 				D0FF6418EBF277AB76A5EED8 /* TrackingMenuViewController.swift */,
 				D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */,
 				AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */,
+				D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */,
+				AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */,
+				AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */,
+				AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */,
+				AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */,
+				AF0AB672270FED7E0016D530 /* PhotoService.swift */,
+				AF0AB674270FEEDA0016D530 /* DBData.swift */,
+				AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -131,6 +160,7 @@
 				AFE0F835270D4D6C001B1C5C /* Alamofire */,
 				AFE0F838270D4E82001B1C5C /* FirebaseAuth */,
 				AF2847B7270DE331003C0B16 /* SwiftyJSON */,
+				AFEB1C5627107E1E008D26B4 /* ImageScrollView */,
 			);
 			productName = TravelMap;
 			productReference = D0FF63B6ECBAE4D180CB72A0 /* TravelMap.app */;
@@ -158,6 +188,7 @@
 				AFE0F834270D4D6C001B1C5C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */,
 			);
 			productRefGroup = D0FF66EB06F69D7038A758B8 /* Products */;
 			projectDirPath = "";
@@ -179,6 +210,8 @@
 				D0FF6ADF47670834DD00F732 /* Main.storyboard in Resources */,
 				D0FF627DEBFEA67969ED8701 /* LaunchScreen.storyboard in Resources */,
 				D0FF6A98C94D43C6D6D06641 /* TravelMap.entitlements in Resources */,
+				D0FF6B9EEE417AEFA36F1C0B /* BMJUA_otf.otf in Resources */,
+				AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,10 +225,17 @@
 				D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */,
 				D0FF64499A57687E47358BC4 /* SceneDelegate.swift in Sources */,
 				D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */,
+				AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */,
+				AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */,
+				AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */,
 				D0FF6D893C9FC7468D976755 /* AlbumViewController.swift in Sources */,
+				AF0AB673270FED7E0016D530 /* PhotoService.swift in Sources */,
 				D0FF650BD16765F8400F1758 /* DailyPhotoListViewController.swift in Sources */,
 				D0FF640DD756F4C93623DE84 /* MainMapViewConroller.swift in Sources */,
+				AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */,
 				D0FF6473FD17CE1B7F752BE0 /* MainViewController.swift in Sources */,
+				AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */,
+				AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */,
 				D0FF6899DDB26A19C78A3A0F /* TrackingMenuViewController.swift in Sources */,
 				AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */,
 			);
@@ -255,6 +295,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -269,7 +310,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,6 +448,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -421,7 +463,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -481,6 +523,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huynguyencong/ImageScrollView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -503,6 +553,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		AFEB1C5627107E1E008D26B4 /* ImageScrollView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */;
+			productName = ImageScrollView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

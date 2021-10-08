@@ -10,7 +10,7 @@ import MapKit
 import Photos
 
 class MainMapViewConroller: UIViewController, MKMapViewDelegate {
-    static var instance: MainMapViewConroller?
+    static var instance: MainMapViewConroller!
     @IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
@@ -22,31 +22,25 @@ class MainMapViewConroller: UIViewController, MKMapViewDelegate {
     func refresh() {
         var annotaions: [MKAnnotation] = []
         let s = DispatchSemaphore(value: 10)
-        for i in 0..<MainViewController.allPhotos!.count {
-            let asset = MainViewController.allPhotos![i]
+        for i in 0..<PhotoService.allPhotos!.count {
+            let asset = PhotoService.allPhotos![i]
             let loc = asset.location?.coordinate
 
             if (loc != nil) {
                 s.wait()
-                DispatchQueue.main.startCoroutine {
-                    let imageManager = PHCachingImageManager()
-                    imageManager.requestImage(for: asset, targetSize: CGSize(width: 30, height: 30), contentMode: .aspectFill, options: nil, resultHandler: { image, _ in
+                DispatchQueue.global().startCoroutine {
 
+                    self.requestIamge(with: asset, thumbnailSize: CGSize(width: 30, height: 30)) { image in
+                        if (image != nil) {
+                            let annotation = Locations(image!)
+                            annotation.coordinate = loc!
+                            let annotation2 = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "locations")
+                            annotaions.append(annotation2.annotation!)
 
-                        // The cell may have been recycled by the time this handler gets called;
+                            s.signal()
 
-
-                        // set the cell's thumbnail image only if it's still showing the same asset.
-
-
-                        let annotation = Locations(image!)
-                        annotation.coordinate = loc!
-                        let annotation2 = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "locations")
-                        annotaions.append(annotation2.annotation!)
-
-                        s.signal()
-
-                    })
+                        }
+                    }
 
                 }
 

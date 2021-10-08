@@ -18,7 +18,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var trackinBtn: UIView!
 
     var btns: [UIView]!
-    static var allPhotos: PHFetchResult<PHAsset>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,38 +51,36 @@ class MainViewController: UIViewController {
         }
         if (PHPhotoLibrary.authorizationStatus() == .authorized) {
 
+            PhotoService()
 
-            DispatchQueue.main.async {
-                let fetchOptions = PHFetchOptions()
-                fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-                MainViewController.allPhotos = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
-
-                do {
-                    MainMapViewConroller.instance!.refresh()
-                } catch {
-                    print(error)
-
-                }
-            }
         } else {
             PHPhotoLibrary.requestAuthorization() { status in
                 switch (status) {
                 case .authorized:
 
-                    DispatchQueue.main.async { [self] in
-                        MainViewController.allPhotos = PHAsset.fetchAssets(with: nil)
-
-                        MainMapViewConroller.instance!.refresh()
-                    }
+                    PhotoService()
                     break;
 
-                case .denied:
-                    break;
                 case .notDetermined:
                     break;
-                case .restricted:
-                    break;
-                case .limited:
+                case .restricted, .limited, .denied:
+                    let alertController = UIAlertController(title: "권한이 필요합니다.", message: "Mybee 앱을 이용하기 위해 반드시 필요한 권한입니다. 설정을 통해 허용해 주세요.", preferredStyle: .alert)
+
+                    let settingsAction = UIAlertAction(title: "예", style: .default) { (_) -> Void in
+                        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                            return
+                        }
+                        if UIApplication.shared.canOpenURL(settingsUrl) {
+                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in })
+                        }
+
+                    }
+                    let cancelAction = UIAlertAction(title: "아니오", style: .default, handler: nil)
+
+                    alertController.addAction(cancelAction)
+                    alertController.addAction(settingsAction)
+                    self.present(alertController, animated: true, completion: nil)
+
                     break
                 @unknown default:
                     break
@@ -108,7 +105,7 @@ class MainViewController: UIViewController {
         }
         let btn = btns[n] as! ToggleButton
         btn.toggle(true)
-        scrollView.setContentOffset(CGPoint(x: Int(scrollView.contentSize.width) / 4 * n, y: 0), animated: false)
+        scrollView.setContentOffset(CGPoint(x: Int(scrollView.contentSize.width) / 4 * n, y: 0), animated: true)
 
     }
 }
