@@ -17,11 +17,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mapBtn: UIView!
     @IBOutlet weak var trackinBtn: UIView!
 
+
     var btns: [UIView]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let identifiers = ["DailyPhotoListVC", "AlbumVC", "MainMapVC", "TrackingMenuVC"]
+        let identifiers = ["DailyPhotoListVC", "AlbumVC", "GoogleMapVC", /*"MainMapVC",*/ "TrackingMenuVC"]
         self.scrollView.contentSize.width = self.view.frame.width * 4
         for i in 0..<identifiers.count {
             guard let vc = self.storyboard?.instantiateViewController(withIdentifier: identifiers[i]) else {
@@ -64,7 +65,7 @@ class MainViewController: UIViewController {
                 case .notDetermined:
                     break;
                 case .restricted, .limited, .denied:
-                    let alertController = UIAlertController(title: "권한이 필요합니다.", message: "Mybee 앱을 이용하기 위해 반드시 필요한 권한입니다. 설정을 통해 허용해 주세요.", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "권한이 필요합니다.", message: "앱을 이용하기 위해 반드시 필요한 권한입니다. 설정을 통해 허용해 주세요.", preferredStyle: .alert)
 
                     let settingsAction = UIAlertAction(title: "예", style: .default) { (_) -> Void in
                         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {

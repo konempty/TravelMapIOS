@@ -3,7 +3,61 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ImageListViewController.collectionView(_:numberOfItemsInSection:):ImageListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ImageListViewController.imageList[0].modifyTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in TrackingMenuViewController.findNewPicture():TrackingMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
+            </PersistentString>
+            <PersistentString
+               value = "Date(timeIntervalSince1970: TimeInterval(self.lastTime))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TrackingListViewController.viewDidLoad():TrackingListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;hello&quot;.height(withConstrainedWidth: tableView.frame.width, font: UIFont(name: &quot;BMJUAOTF&quot;, size: 19)!)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TrackingMenuViewController.locationManager(_:didUpdateLocations:):TrackingMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Int(NSDate().timeIntervalSince1970) - lastTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TrackingMenuViewController.startTracker():TrackingMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastTime">
+            </PersistentString>
+            <PersistentString
+               value = "realm.objects(EventData.self).filter(&quot;eventNum != 4 &quot;).sorted(byKeyPath: &quot;id&quot;, ascending: false).first">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in PhotoService.init():PhotoService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in PhotoViewController.menuFun():PhotoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(PhotoViewController.imageList.count)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "DailyPhotoListViewController.collectionView(_:cellForItemAt:):DailyPhotoListViewController.swift">
@@ -11,6 +65,14 @@
             <PersistentString
                value = "PhotoService.imageListDaily[dailyKey[indexPath.section]]!.count">
             </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotoViewController.collectionView(_:cellForItemAt:):PhotoViewController.swift">
+         <PersistentStrings>
             <PersistentString
                value = "indexPath.row">
             </PersistentString>

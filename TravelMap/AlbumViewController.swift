@@ -13,10 +13,15 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
     var keys: [String]!
     static var instance: AlbumViewController!
     var labelSize = 0
+    var viewMap = [UIImageView: PHAsset]()
 
     // CollectionView item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        keys = Array(PhotoService.imageListMap.keys)
+        let keyset = PhotoService.imageListMap.keys
+        keys = keyset.sorted() { k1, k2 in
+            return (PhotoService.imageListMap[k1]?.first?.modifyTime)! > (PhotoService.imageListMap[k2]?.first?.modifyTime)!
+
+        }
         return PhotoService.imageListMap.count
     }
 
@@ -33,20 +38,18 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         attributedStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(rgb: 0x9b9b9b), range: (text as NSString).range(of: countString, options: .backwards))
 
         cell.albumName.attributedText = attributedStr
-        let photoData = list.last!
+        let photoData = list.first!
 
-        if (photoData.image == nil) {
-            self.requestIamge(with: photoData.asset, thumbnailSize: CGSize(width: 240, height: 240)) { image in
-                if (image != nil) {
-                    photoData.image = image
-                    cell.image.image = photoData.image
-
-                }
+        //if (photoData.image == nil) {
+        self.requestIamge(with: photoData.asset, thumbnailSize: CGSize(width: 480, height: 480)) { image in
+            if (image != nil && self.viewMap[cell.image] == photoData.asset) {
+                //photoData.image = image
+                cell.image.image = image
             }
-
-        } else {
-            cell.image.image = photoData.image
         }
+        //print(cell.image.value(forKey: "asset"))
+        viewMap[cell.image] = photoData.asset
+
         //cell.image.clipsToBounds = true
 
         return cell
@@ -69,13 +72,18 @@ class AlbumViewController: UIViewController, UICollectionViewDelegate, UICollect
         4.0
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        ImageListViewController.imageList = PhotoService.imageListMap[keys[indexPath.row]]!
+        ShowViewController("ImageListVC")
+    }
+
     func refresh() {
         collectionView.reloadData()
     }
 
 
     override func viewDidLoad() {
-        labelSize = Int("hello".height(withConstrainedWidth: collectionView.frame.width, font: UIFont(name: "BMJUAOTF", size: 17)!)) + 10
+        labelSize = Int("hello".height(withConstrainedWidth: collectionView.frame.width, font: UIFont(name: "BMJUAOTF", size: 17)!)) + 15
         AlbumViewController.instance = self
 
     }

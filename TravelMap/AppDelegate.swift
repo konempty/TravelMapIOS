@@ -9,6 +9,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import Photos
+import GoogleMaps
+import DropDown
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyBoHTmxjR0r1V567C1-Uydp4w-MkNb1sGE")
+        DropDown.startListeningToKeyboard()
         sleep(2)
         return true
     }
@@ -425,3 +429,4 @@ extension PHAsset {
         }
     }
 }
+

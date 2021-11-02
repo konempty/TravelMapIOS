@@ -8,13 +8,14 @@
 import Foundation
 import UIKit
 import Photos
+import RealmSwift
 
-class BaseData {
-    var name: String?
-    var path: String?
-    var isVideo: Bool?
-    var lat: Double?
-    var lng: Double?
+class BaseData: Object {
+    @objc dynamic var name: String?
+    @objc dynamic var path: String?
+    let isVideo = RealmOptional<Bool>()
+    let lat = RealmOptional<Double>()
+    let lng = RealmOptional<Double>()
     /*val latLng: LatLng?
         get() {
             if (lat == nil || lng == nil)
@@ -25,20 +26,26 @@ class BaseData {
 
 
     var asset: PHAsset?
-    var image: UIImage?
+
+    override static func ignoredProperties() -> [String] {
+        return ["asset"]
+    }
+
+    //var image: UIImage?
 }
 
 
 class PhotoData: BaseData {
 
-    let id: String?
-    let modifyTime: Date?
-    var isLoc: Bool?
+    @objc dynamic var id: String!
+    @objc dynamic var modifyTime: Date!
+    var isLoc: Bool!
 
-    private init(
+    convenience init(
             id: String?,
-            modifyTime: Date?,
-            isLoc: Bool?) {
+            modifyTime: Date,
+            isLoc: Bool) {
+        self.init()
         self.id = id
         self.modifyTime = modifyTime
         self.isLoc = isLoc
@@ -49,17 +56,23 @@ class PhotoData: BaseData {
             name: String?,
             path: String?,
             isVideo: Bool?,
-            modifyTime: Date?,
-            isLoc: Bool?,
+            modifyTime: Date,
+            isLoc: Bool,
             lat: Double?,
             lng: Double?
     ) {
         self.init(id: id, modifyTime: modifyTime, isLoc: isLoc)
         super.name = name
         super.path = path
-        super.isVideo = isVideo
-        super.lat = lat
-        super.lng = lng
+        super.isVideo.value = isVideo
+        super.lat.value = lat
+        super.lng.value = lng
+
+    }
+
+
+    override class func primaryKey() -> String? {
+        return "id"
     }
 
     /*override val uri: Uri
@@ -91,31 +104,17 @@ class PhotoData: BaseData {
 * 5 : 이미지 등록
 * */
 class EventData: BaseData {
-    var id: Int64?
-    var trackingNum: Int?
-    var eventNum: Int?
-    let pictureId: Int64?
-    var trackingSpeed: Int?
-    var time: Date?
-
-    private init(id: Int64?,
-                 trackingNum: Int?,
-                 eventNum: Int?,
-                 pictureId: Int64?,
-                 trackingSpeed: Int?,
-                 time: Date?) {
-        self.id = id
-        self.trackingNum = trackingNum
-        self.eventNum = eventNum
-        self.pictureId = pictureId
-        self.trackingSpeed = trackingSpeed
-        self.time = time
-    }
+    @objc dynamic var id: Int64 = 0
+    @objc dynamic var trackingNum = 0
+    @objc dynamic var eventNum = 0
+    let pictureId = RealmOptional<Int64>()
+    let trackingSpeed = RealmOptional<Int>()
+    @objc dynamic var time: Date!
 
     convenience init(
-            id: Int64? = nil,
-            trackingNum: Int? = nil,
-            eventNum: Int? = nil,
+            id: Int64,
+            trackingNum: Int,
+            eventNum: Int,
             lat: Double? = nil,
             lng: Double? = nil,
             pictureId: Int64? = nil,
@@ -123,15 +122,27 @@ class EventData: BaseData {
             path: String? = nil,
             isVideo: Bool? = nil,
             trackingSpeed: Int? = nil,
-            time: Date
+            time: Date = Date()
     ) {
-        self.init(id: id, trackingNum: trackingNum, eventNum: eventNum, pictureId: pictureId, trackingSpeed: trackingSpeed, time: time)
+        self.init()
+        self.id = id
+        self.trackingNum = trackingNum
+        self.eventNum = eventNum
+        self.pictureId.value = pictureId
+        self.trackingSpeed.value = trackingSpeed
+        self.time = time
         super.name = name
         super.path = path
-        super.isVideo = isVideo
-        super.lat = lat
-        super.lng = lng
+        super.isVideo.value = isVideo
+        super.lat.value = lat
+        super.lng.value = lng
     }
+
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+
 
     /*override val uri: Uri
         get() {
@@ -162,11 +173,12 @@ class TrackingListData {
     let startTime: Date
     let endTime: Date
 
-    init(id: Int64,
-         trackingNum: Int,
-         name: String,
-         startTime: Date,
-         endTime: Date) {
+    init(
+            id: Int64,
+            trackingNum: Int,
+            name: String,
+            startTime: Date,
+            endTime: Date) {
         self.id = id
         self.trackingNum = trackingNum
         self.name = name

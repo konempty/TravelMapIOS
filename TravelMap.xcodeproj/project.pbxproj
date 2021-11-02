@@ -11,11 +11,28 @@
 		AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AB674270FEEDA0016D530 /* DBData.swift */; };
 		AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */; };
 		AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AF2847B7270DE331003C0B16 /* SwiftyJSON */; };
+		AF5E09B62713314700B964D8 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E09B52713314700B964D8 /* ImageListViewController.swift */; };
+		AF5E09C12713E66C00B964D8 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */; };
 		AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */; };
 		AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */; };
 		AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = AF69CBB2270EC82A00F92788 /* ic_launcher.png */; };
 		AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */; };
 		AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */; };
+		AFA7307327141EB2001994C2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */; };
+		AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670B272AD9A60021C6E5 /* GoogleMaps */; };
+		AFB5670E272AD9A60021C6E5 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */; };
+		AFB56710272AD9A60021C6E5 /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */; };
+		AFB56712272ADA070021C6E5 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */; };
+		AFB56715272ADE750021C6E5 /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = AFB56714272ADE750021C6E5 /* GoogleMapsUtils */; };
+		AFB56717272AE9130021C6E5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */; };
+		AFB56719272AEA9D0021C6E5 /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */; };
+		AFB5674A272C40520021C6E5 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB56745272C3FC00021C6E5 /* DropDown.framework */; };
+		AFB5674B272C40520021C6E5 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFB56745272C3FC00021C6E5 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFB5674E272E42690021C6E5 /* TrackingItemMenuDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */; };
+		AFB56752272E4FAA0021C6E5 /* TrackingNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */; };
+		AFCD2BD12721015E00B2D40A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AFCD2BD02721015E00B2D40A /* RealmSwift */; };
+		AFCD2BD52721152200B2D40A /* MyPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD2BD42721152200B2D40A /* MyPreferences.swift */; };
+		AFD06CB12723CD02006122FA /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD06CB02723CD02006122FA /* AtomicInteger.swift */; };
 		AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */; };
 		AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F835270D4D6C001B1C5C /* Alamofire */; };
 		AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F838270D4E82001B1C5C /* FirebaseAuth */; };
@@ -38,15 +55,71 @@
 		D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AFB56740272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A76440F1B676C2300BF1A2D;
+			remoteInfo = Demo;
+		};
+		AFB56742272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A7644241B676C2300BF1A2D;
+			remoteInfo = DropDownTests;
+		};
+		AFB56744272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0AB5D8711D0EEECD002D3A17;
+			remoteInfo = DropDown;
+		};
+		AFB56746272C3FE30021C6E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB5D8701D0EEECD002D3A17;
+			remoteInfo = DropDown;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFB5674C272C40520021C6E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AFB5674B272C40520021C6E5 /* DropDown.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AF0AB672270FED7E0016D530 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		AF0AB674270FEEDA0016D530 /* DBData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBData.swift; sourceTree = "<group>"; };
 		AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
+		AF5E09B52713314700B964D8 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeReusableView.swift; sourceTree = "<group>"; };
 		AF69CBB2270EC82A00F92788 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListTableViewCell.swift; sourceTree = "<group>"; };
 		AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewController.swift; sourceTree = "<group>"; };
+		AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
+		AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerView.xib; sourceTree = "<group>"; };
+		AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
+		AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingItemMenuDialog.swift; sourceTree = "<group>"; };
+		AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingNameDialog.swift; sourceTree = "<group>"; };
+		AFCD2BD42721152200B2D40A /* MyPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPreferences.swift; sourceTree = "<group>"; };
+		AFD06CB02723CD02006122FA /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0FF618743DBE3E4B7BB7E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
@@ -72,44 +145,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCD2BD12721015E00B2D40A /* RealmSwift in Frameworks */,
 				AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */,
 				AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */,
 				AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */,
+				AFB56715272ADE750021C6E5 /* GoogleMapsUtils in Frameworks */,
+				AFB56710272AD9A60021C6E5 /* GoogleMapsCore in Frameworks */,
 				AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */,
+				AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */,
+				AFB5674A272C40520021C6E5 /* DropDown.framework in Frameworks */,
 				AFEB1C5727107E1E008D26B4 /* ImageScrollView in Frameworks */,
+				AFB5670E272AD9A60021C6E5 /* GoogleMapsBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFB5673B272C3FC00021C6E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFB56741272C3FC00021C6E5 /* Demo.app */,
+				AFB56743272C3FC00021C6E5 /* DropDownTests.xctest */,
+				AFB56745272C3FC00021C6E5 /* DropDown.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFB56748272C3FF80021C6E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0FF66134C63B78EF0FEB6A1 /* TravelMap */ = {
 			isa = PBXGroup;
 			children = (
-				AF69CBB2270EC82A00F92788 /* ic_launcher.png */,
-				D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */,
-				D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */,
-				D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */,
-				D0FF6E04A90A8DCAECCA74AF /* Info.plist */,
-				D0FF61A112E355F64E89E77F /* SceneDelegate.swift */,
-				D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */,
-				D0FF6D7FE5EBD90CA9AB1F9E /* Main.storyboard */,
+				AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */,
 				D0FF6340C551E55CBDE543D3 /* AlbumViewController.swift */,
+				D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */,
+				D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */,
+				AFD06CB02723CD02006122FA /* AtomicInteger.swift */,
 				D0FF697CAF616812B00592D6 /* Base.lproj */,
+				D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */,
+				AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */,
+				AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */,
 				D0FF6B62093C2C424D3E9A56 /* DailyPhotoListViewController.swift */,
+				AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */,
+				AF0AB674270FEEDA0016D530 /* DBData.swift */,
+				AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */,
+				AF69CBB2270EC82A00F92788 /* ic_launcher.png */,
+				AF5E09B52713314700B964D8 /* ImageListViewController.swift */,
+				AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */,
+				AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */,
+				D0FF6E04A90A8DCAECCA74AF /* Info.plist */,
+				D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */,
+				D0FF6D7FE5EBD90CA9AB1F9E /* Main.storyboard */,
 				D0FF63C8F400A32D5B72426F /* MainMapViewConroller.swift */,
 				D0FF6BF4D1C47202CEBB372E /* MainViewController.swift */,
-				D0FF6418EBF277AB76A5EED8 /* TrackingMenuViewController.swift */,
-				D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */,
-				AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */,
-				D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */,
-				AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */,
-				AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */,
+				AFCD2BD42721152200B2D40A /* MyPreferences.swift */,
+				AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */,
+				AF0AB672270FED7E0016D530 /* PhotoService.swift */,
+				AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */,
+				D0FF61A112E355F64E89E77F /* SceneDelegate.swift */,
 				AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */,
 				AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */,
-				AF0AB672270FED7E0016D530 /* PhotoService.swift */,
-				AF0AB674270FEEDA0016D530 /* DBData.swift */,
-				AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */,
+				D0FF6418EBF277AB76A5EED8 /* TrackingMenuViewController.swift */,
+				D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */,
+				D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */,
+				AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */,
+				AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -134,8 +240,10 @@
 		D0FF6F5D0BD6A98DC6CBC1CF = {
 			isa = PBXGroup;
 			children = (
+				AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */,
 				D0FF66EB06F69D7038A758B8 /* Products */,
 				D0FF66134C63B78EF0FEB6A1 /* TravelMap */,
+				AFB56748272C3FF80021C6E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,10 +257,12 @@
 				D0FF6B1D1127AD4755F98713 /* Sources */,
 				D0FF64FD7889089663FD36BE /* Frameworks */,
 				D0FF6166AA3CC129489CDBC5 /* Resources */,
+				AFB5674C272C40520021C6E5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AFB56747272C3FE30021C6E5 /* PBXTargetDependency */,
 			);
 			name = TravelMap;
 			packageProductDependencies = (
@@ -161,6 +271,11 @@
 				AFE0F838270D4E82001B1C5C /* FirebaseAuth */,
 				AF2847B7270DE331003C0B16 /* SwiftyJSON */,
 				AFEB1C5627107E1E008D26B4 /* ImageScrollView */,
+				AFCD2BD02721015E00B2D40A /* RealmSwift */,
+				AFB5670B272AD9A60021C6E5 /* GoogleMaps */,
+				AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */,
+				AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */,
+				AFB56714272ADE750021C6E5 /* GoogleMapsUtils */,
 			);
 			productName = TravelMap;
 			productReference = D0FF63B6ECBAE4D180CB72A0 /* TravelMap.app */;
@@ -189,15 +304,48 @@
 				AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */,
+				AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
+				AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
 			);
 			productRefGroup = D0FF66EB06F69D7038A758B8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AFB5673B272C3FC00021C6E5 /* Products */;
+					ProjectRef = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D0FF6F226CC696961C92AA57 /* TravelMap */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AFB56741272C3FC00021C6E5 /* Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Demo.app;
+			remoteRef = AFB56740272C3FC00021C6E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB56743272C3FC00021C6E5 /* DropDownTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DropDownTests.xctest;
+			remoteRef = AFB56742272C3FC00021C6E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB56745272C3FC00021C6E5 /* DropDown.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DropDown.framework;
+			remoteRef = AFB56744272C3FC00021C6E5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D0FF6166AA3CC129489CDBC5 /* Resources */ = {
@@ -209,6 +357,7 @@
 				D0FF6A32958F37A6ACC8C952 /* Main.storyboard in Resources */,
 				D0FF6ADF47670834DD00F732 /* Main.storyboard in Resources */,
 				D0FF627DEBFEA67969ED8701 /* LaunchScreen.storyboard in Resources */,
+				AFB56719272AEA9D0021C6E5 /* CustomMarkerView.xib in Resources */,
 				D0FF6A98C94D43C6D6D06641 /* TravelMap.entitlements in Resources */,
 				D0FF6B9EEE417AEFA36F1C0B /* BMJUA_otf.otf in Resources */,
 				AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */,
@@ -222,26 +371,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5E09B62713314700B964D8 /* ImageListViewController.swift in Sources */,
 				D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */,
+				AFB56717272AE9130021C6E5 /* CustomMarkerView.swift in Sources */,
+				AFCD2BD52721152200B2D40A /* MyPreferences.swift in Sources */,
 				D0FF64499A57687E47358BC4 /* SceneDelegate.swift in Sources */,
 				D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */,
+				AFB5674E272E42690021C6E5 /* TrackingItemMenuDialog.swift in Sources */,
 				AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */,
 				AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */,
+				AFD06CB12723CD02006122FA /* AtomicInteger.swift in Sources */,
 				AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */,
+				AFA7307327141EB2001994C2 /* PhotoCollectionViewCell.swift in Sources */,
 				D0FF6D893C9FC7468D976755 /* AlbumViewController.swift in Sources */,
 				AF0AB673270FED7E0016D530 /* PhotoService.swift in Sources */,
 				D0FF650BD16765F8400F1758 /* DailyPhotoListViewController.swift in Sources */,
 				D0FF640DD756F4C93623DE84 /* MainMapViewConroller.swift in Sources */,
 				AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */,
+				AF5E09C12713E66C00B964D8 /* ImageScrollViewController.swift in Sources */,
 				D0FF6473FD17CE1B7F752BE0 /* MainViewController.swift in Sources */,
 				AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */,
 				AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */,
 				D0FF6899DDB26A19C78A3A0F /* TrackingMenuViewController.swift in Sources */,
+				AFB56752272E4FAA0021C6E5 /* TrackingNameDialog.swift in Sources */,
+				AFB56712272ADA070021C6E5 /* GoogleMapViewController.swift in Sources */,
 				AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFB56747272C3FE30021C6E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			targetProxy = AFB56746272C3FE30021C6E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */ = {
@@ -290,6 +456,9 @@
 				DEVELOPMENT_TEAM = Q3X65N3243;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelMap/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진쓰";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -443,6 +612,9 @@
 				DEVELOPMENT_TEAM = Q3X65N3243;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelMap/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진쓰";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -499,6 +671,30 @@
 				version = 5.0.0;
 			};
 		};
+		AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/YAtechnologies/GoogleMaps-SP.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/google-maps-ios-utils.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		AFE0F831270D4D1B001B1C5C /* XCRemoteSwiftPackageReference "SwiftCoroutine" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/belozierov/SwiftCoroutine.git";
@@ -538,6 +734,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		AFB5670B272AD9A60021C6E5 /* GoogleMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GoogleMaps;
+		};
+		AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GoogleMapsBase;
+		};
+		AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			productName = GoogleMapsCore;
+		};
+		AFB56714272ADE750021C6E5 /* GoogleMapsUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */;
+			productName = GoogleMapsUtils;
+		};
+		AFCD2BD02721015E00B2D40A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 		AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */ = {
 			isa = XCSwiftPackageProductDependency;

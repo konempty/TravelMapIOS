@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Photos
 
 class DailyPhotoListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     static var instance: DailyPhotoListViewController!
     var dailyKey: Array<Date> = []
+    var viewMap = [UIImageView: PHAsset]()
 
     // CollectionView item 개수
 
@@ -33,18 +35,22 @@ class DailyPhotoListViewController: UIViewController, UICollectionViewDelegate, 
         if (indexPath.row < PhotoService.imageListDaily[dailyKey[indexPath.section]]!.count) {
 
             let photoData = PhotoService.imageListDaily[dailyKey[indexPath.section]]![indexPath.row]
-            if (photoData.image == nil) {
-                self.requestIamge(with: photoData.asset, thumbnailSize: CGSize(width: 240, height: 240)) { image in
-                    if (image != nil) {
-                        photoData.image = image
-                        cell.image.image = photoData.image
-                    }
+            //if (photoData.image == nil) {
+            self.requestIamge(with: photoData.asset, thumbnailSize: CGSize(width: 240, height: 240)) { image in
+                if (image != nil && self.viewMap[cell.image] == photoData.asset) {
+                    //photoData.image = image
+                    cell.image.image = image
                 }
-
-            } else {
-                cell.image.image = photoData.image
             }
+            // print(cell.image.value(forKey: "asset"))
+            viewMap[cell.image] = photoData.asset
+
+            //} else {
+            //   cell.image.image = photoData.image
+            //}
             //cell.image.clipsToBounds = true
+        } else {
+            cell.image.image = nil
         }
 
         return cell
@@ -76,7 +82,14 @@ class DailyPhotoListViewController: UIViewController, UICollectionViewDelegate, 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        PhotoViewController.photoData = PhotoService.imageListDaily[dailyKey[indexPath.section]]![indexPath.row]
+
+        let photoDataAsset = PhotoService.imageListDaily[dailyKey[indexPath.section]]![indexPath.row].asset
+        PhotoViewController.startIdx = PhotoService.imageList.firstIndex() { data in
+            return data.asset == photoDataAsset
+        }!
+
+
+        PhotoViewController.imageList = PhotoService.imageList
         ShowViewController("PhotoVC")
     }
 
