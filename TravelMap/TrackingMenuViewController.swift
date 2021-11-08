@@ -151,17 +151,22 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
             let alertController = UIAlertController(title: nil, message: "여행기록을 끝내시겠습니까?", preferredStyle: .alert)
 
             let settingsAction = UIAlertAction(title: "예", style: .default) { [self] (_) -> Void in
-                DispatchQueue.global().async {
-                    let realm = try! Realm()
-                    let trackingNum = realm.objects(EventData.self).map {
-                        $0.trackingNum
-                    }.max() { i1, i2 in
-                        return i1 < i2
-                    }!
+
+                let realm = try! Realm()
+                let trackingNum = realm.objects(EventData.self).map {
+                    $0.trackingNum
+                }.max() { i1, i2 in
+                    return i1 < i2
+                }!
+
+                let uvc = self.storyboard?.instantiateViewController(withIdentifier: "TrackingNameDialog") as! TrackingNameDialog
+                uvc.modalPresentationStyle = .overCurrentContext
+                uvc.setData(name: "여행기록\(trackingNum)", trackingNum: trackingNum, isEdit: false)
+                uvc.setOnOk() { [self]nameTmp in
+
                     DispatchQueue.main.async {
 
-
-                        var name = "여행기록\(trackingNum)"
+                        var name = nameTmp
                         if name.isEmpty {
                             name = "여행기록\(trackingNum)"
                         }
@@ -180,7 +185,11 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
                             }
                         }
                     }
+
                 }
+                present(uvc, animated: true)
+
+
             }
             let cancelAction = UIAlertAction(title: "아니오", style: .default)
 
@@ -360,7 +369,6 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
                 return i1 < i2
             } ?? 0
             for i in 0..<allPhotos.count {
-                print("!!")
                 let photo = allPhotos[i]
                 let name = photo.value(forKey: "filename") as! String
                 let dir = photo.value(forKey: "directory") as! String
@@ -371,7 +379,7 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
                     loc = lastLoction
                 }
 
-                list.append(EventData(id: id.incrementAndGet(), trackingNum: trackingNum, eventNum: 5, lat: loc?.latitude, lng: loc?.longitude, name: name, path: dir, isVideo: media, time: date))
+                list.append(EventData(id: id.incrementAndGet(), trackingNum: trackingNum, eventNum: 5, lat: loc?.latitude, lng: loc?.longitude, pictureId: photo.localIdentifier, name: name, path: dir, isVideo: media, time: date))
 
 
             }

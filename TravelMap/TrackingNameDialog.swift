@@ -36,9 +36,12 @@ class TrackingNameDialog: UIViewController, UITextFieldDelegate {
             nameTF.text = name
         } else {
             titleLabel.text = "여행기록 저장"
-            msgLabel.text = "이번 여행을 기억할 수 있게 여행 기록에 이름을 정해주세요."
-            nameTF.placeholder = name
+            msgLabel.text = "이번 여행을 기억할 수 있게\n여행 기록에 이름을 정해주세요."
         }
+        nameTF.attributedPlaceholder = NSAttributedString(
+                string: name,
+                attributes: [.foregroundColor: UIColor.init(white: 1, alpha: 0.5)]
+        )
 
     }
 

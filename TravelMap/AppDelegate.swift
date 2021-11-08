@@ -11,6 +11,9 @@ import SwiftyJSON
 import Photos
 import GoogleMaps
 import DropDown
+import CommonCrypto
+import Toast
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBoHTmxjR0r1V567C1-Uydp4w-MkNb1sGE")
         DropDown.startListeningToKeyboard()
+        var style = ToastStyle()
+
+        // this is just one of many style options
+        style.messageColor = .white
+        style.messageFont = UIFont(name: "BMJUAOTF", size: 14)!
+
+        // present the toast with the new style
+
+        // or perhaps you want to use this style for all toasts going forward?
+        // just set the shared style and there's no need to provide the style again
+        ToastManager.shared.style = style
+        FirebaseConfiguration.shared.setLoggerLevel(.error)
         sleep(2)
+
         return true
     }
 
@@ -75,7 +91,8 @@ extension UIView {
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         if (isRound) {
-            gradient.cornerRadius = 10
+            
+            gradient.cornerRadius = min(10,bounds.height/2)
         }
         self.layer.insertSublayer(gradient, at: 0)
     }
@@ -86,6 +103,8 @@ extension UIView {
             layer.sublayers![0].removeFromSuperlayer()
         }
     }
+
+
 }
 
 class GradientButton: UIButton {
@@ -144,6 +163,15 @@ class BorderTextField: UITextField {
     }
 }
 
+class WhiteImageView: UIImageView {
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        image = image?.withRenderingMode(.alwaysTemplate)
+        tintColor = .white
+    }
+
+}
+
 extension UIViewController {
     func finish(_ b: Bool = true) {
 
@@ -158,12 +186,12 @@ extension UIViewController {
         present(uvc, animated: true)
     }
 
-    func ShowDialog(_ id: String) {
-        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: id) else {
-            return
-        }
-        uvc.modalPresentationStyle = .overCurrentContext
-        present(uvc, animated: true)
+    func ShowDialog(_ id: String) -> UIViewController {
+        let uvc = self.storyboard?.instantiateViewController(withIdentifier: id)
+        uvc!.modalPresentationStyle = .overCurrentContext
+        present(uvc!, animated: true)
+
+        return uvc!
     }
 
     func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Any>) -> Void) {
@@ -210,6 +238,7 @@ extension NSObject {
             }
 
         })
+
 
     }
 
@@ -430,3 +459,8 @@ extension PHAsset {
     }
 }
 
+extension NSLayoutConstraint {
+    func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
+    }
+}

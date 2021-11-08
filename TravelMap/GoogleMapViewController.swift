@@ -14,6 +14,10 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, GMUClusterR
     @IBOutlet weak var coverView: UIView!
     static var clusterList = [PhotoData]()
 
+    static var instance: GoogleMapViewController!
+    var mapView: GMSMapView!
+    var clusterManager: GMUClusterManager!
+
     class MyItem: NSObject, GMUClusterItem {
         var position: CLLocationCoordinate2D
 
@@ -28,14 +32,10 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate, GMUClusterR
 
     }
 
-    static var instance: GoogleMapViewController!
-    var mapView: GMSMapView!
-    var clusterManager: GMUClusterManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.camera(withLatitude: 0, longitude: 0, zoom: 0)
-        mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        mapView = GMSMapView(frame: self.view.frame)
         self.view.addSubview(mapView)
         self.view.sendSubviewToBack(mapView)
 

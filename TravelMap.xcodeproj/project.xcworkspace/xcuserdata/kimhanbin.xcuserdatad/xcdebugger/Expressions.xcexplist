@@ -3,59 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ImageListViewController.collectionView(_:numberOfItemsInSection:):ImageListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "ImageListViewController.imageList[0].modifyTime">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in TrackingMenuViewController.findNewPicture():TrackingMenuViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "Date()">
-            </PersistentString>
-            <PersistentString
-               value = "Date(timeIntervalSince1970: TimeInterval(self.lastTime))">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TrackingListViewController.viewDidLoad():TrackingListViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "&quot;hello&quot;.height(withConstrainedWidth: tableView.frame.width, font: UIFont(name: &quot;BMJUAOTF&quot;, size: 19)!)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "TrackingMenuViewController.locationManager(_:didUpdateLocations:):TrackingMenuViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "Int(NSDate().timeIntervalSince1970) - lastTime">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TrackingMenuViewController.startTracker():TrackingMenuViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "lastTime">
-            </PersistentString>
-            <PersistentString
-               value = "realm.objects(EventData.self).filter(&quot;eventNum != 4 &quot;).sorted(byKeyPath: &quot;id&quot;, ascending: false).first">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in PhotoService.init():PhotoService.swift">
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in closure #2 in PhotoViewController.menuFun():PhotoViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "print(PhotoViewController.imageList.count)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -71,10 +22,92 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "UIView.removeGradient():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "layer.sublayers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in TrackingMenuViewController.findNewPicture():TrackingMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
+            </PersistentString>
+            <PersistentString
+               value = "Date(timeIntervalSince1970: TimeInterval(self.lastTime))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageListViewController.collectionView(_:numberOfItemsInSection:):ImageListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ImageListViewController.imageList[0].modifyTime">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PhotoService.init():PhotoService.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TrackingMenuViewController.startTracker():TrackingMenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastTime">
+            </PersistentString>
+            <PersistentString
+               value = "realm.objects(EventData.self).filter(&quot;eventNum != 4 &quot;).sorted(byKeyPath: &quot;id&quot;, ascending: false).first">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in PhotoViewController.menuFun():PhotoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(PhotoViewController.imageList.count)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "PhotoViewController.collectionView(_:cellForItemAt:):PhotoViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(encodedStr.count)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TrackingListViewController.viewDidLoad():TrackingListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&quot;hello&quot;.height(withConstrainedWidth: tableView.frame.width, font: UIFont(name: &quot;BMJUAOTF&quot;, size: 19)!)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UIColor(named: &quot;dark_sky_blue_two&quot;)!">
+            </PersistentString>
+            <PersistentString
+               value = "constraintToChange">
+            </PersistentString>
+            <PersistentString
+               value = "UIColor(named: &quot;purpleish_blue&quot;)!.cgColor">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

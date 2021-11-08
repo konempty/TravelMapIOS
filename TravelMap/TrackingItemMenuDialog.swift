@@ -82,6 +82,7 @@ class TrackingItemMenuDialog: UIViewController {
 
     @objc func shareFun(_ sender: UITapGestureRecognizer) {
         finish()
+        (self.presentingViewController as! TrackingListViewController).showShareDialog()
     }
 
 }

@@ -18,6 +18,14 @@
 		AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = AF69CBB2270EC82A00F92788 /* ic_launcher.png */; };
 		AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */; };
 		AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */; };
+		AF6AB216273238E2003E0E6B /* TrackingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */; };
+		AF6AB21A27323A91003E0E6B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */; };
+		AF986BC4273584FB004B1350 /* ShareSelectDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */; };
+		AF986BC82735850F004B1350 /* ShareProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BC72735850F004B1350 /* ShareProgressDialog.swift */; };
+		AF986BCC27363BF9004B1350 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF986BCB27363BF9004B1350 /* CryptoSwift */; };
+		AF986BCE27363C69004B1350 /* AES256OutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BCD27363C69004B1350 /* AES256OutputStream.swift */; };
+		AF986BD0273657D4004B1350 /* FileOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BCF273657D4004B1350 /* FileOutputStream.swift */; };
+		AF986BD32736C455004B1350 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF986BD22736C455004B1350 /* Toast */; };
 		AFA7307327141EB2001994C2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */; };
 		AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670B272AD9A60021C6E5 /* GoogleMaps */; };
 		AFB5670E272AD9A60021C6E5 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */; };
@@ -111,6 +119,13 @@
 		AF69CBB2270EC82A00F92788 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListTableViewCell.swift; sourceTree = "<group>"; };
 		AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewController.swift; sourceTree = "<group>"; };
+		AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMapViewController.swift; sourceTree = "<group>"; };
+		AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectDialog.swift; sourceTree = "<group>"; };
+		AF986BC72735850F004B1350 /* ShareProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProgressDialog.swift; sourceTree = "<group>"; };
+		AF986BC9273639BD004B1350 /* TravelMap-Bridging.Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelMap-Bridging.Header.h"; sourceTree = "<group>"; };
+		AF986BCD27363C69004B1350 /* AES256OutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256OutputStream.swift; sourceTree = "<group>"; };
+		AF986BCF273657D4004B1350 /* FileOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileOutputStream.swift; sourceTree = "<group>"; };
 		AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
@@ -147,9 +162,11 @@
 			files = (
 				AFCD2BD12721015E00B2D40A /* RealmSwift in Frameworks */,
 				AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */,
+				AF986BD32736C455004B1350 /* Toast in Frameworks */,
 				AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */,
 				AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */,
 				AFB56715272ADE750021C6E5 /* GoogleMapsUtils in Frameworks */,
+				AF986BCC27363BF9004B1350 /* CryptoSwift in Frameworks */,
 				AFB56710272AD9A60021C6E5 /* GoogleMapsCore in Frameworks */,
 				AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */,
 				AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */,
@@ -216,6 +233,12 @@
 				D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */,
 				AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */,
 				AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */,
+				AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */,
+				AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */,
+				AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */,
+				AF986BC72735850F004B1350 /* ShareProgressDialog.swift */,
+				AF986BCD27363C69004B1350 /* AES256OutputStream.swift */,
+				AF986BCF273657D4004B1350 /* FileOutputStream.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -240,6 +263,7 @@
 		D0FF6F5D0BD6A98DC6CBC1CF = {
 			isa = PBXGroup;
 			children = (
+				AF986BC9273639BD004B1350 /* TravelMap-Bridging.Header.h */,
 				AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */,
 				D0FF66EB06F69D7038A758B8 /* Products */,
 				D0FF66134C63B78EF0FEB6A1 /* TravelMap */,
@@ -276,6 +300,8 @@
 				AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */,
 				AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */,
 				AFB56714272ADE750021C6E5 /* GoogleMapsUtils */,
+				AF986BCB27363BF9004B1350 /* CryptoSwift */,
+				AF986BD22736C455004B1350 /* Toast */,
 			);
 			productName = TravelMap;
 			productReference = D0FF63B6ECBAE4D180CB72A0 /* TravelMap.app */;
@@ -307,6 +333,8 @@
 				AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
 				AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
+				AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = D0FF66EB06F69D7038A758B8 /* Products */;
 			projectDirPath = "";
@@ -371,14 +399,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF986BD0273657D4004B1350 /* FileOutputStream.swift in Sources */,
+				AF6AB216273238E2003E0E6B /* TrackingMapViewController.swift in Sources */,
 				AF5E09B62713314700B964D8 /* ImageListViewController.swift in Sources */,
 				D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */,
 				AFB56717272AE9130021C6E5 /* CustomMarkerView.swift in Sources */,
 				AFCD2BD52721152200B2D40A /* MyPreferences.swift in Sources */,
+				AF986BC82735850F004B1350 /* ShareProgressDialog.swift in Sources */,
 				D0FF64499A57687E47358BC4 /* SceneDelegate.swift in Sources */,
 				D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */,
 				AFB5674E272E42690021C6E5 /* TrackingItemMenuDialog.swift in Sources */,
 				AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */,
+				AF986BC4273584FB004B1350 /* ShareSelectDialog.swift in Sources */,
 				AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */,
 				AFD06CB12723CD02006122FA /* AtomicInteger.swift in Sources */,
 				AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */,
@@ -389,6 +421,8 @@
 				D0FF640DD756F4C93623DE84 /* MainMapViewConroller.swift in Sources */,
 				AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */,
 				AF5E09C12713E66C00B964D8 /* ImageScrollViewController.swift in Sources */,
+				AF986BCE27363C69004B1350 /* AES256OutputStream.swift in Sources */,
+				AF6AB21A27323A91003E0E6B /* BottomSheetViewController.swift in Sources */,
 				D0FF6473FD17CE1B7F752BE0 /* MainViewController.swift in Sources */,
 				AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */,
 				AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */,
@@ -478,6 +512,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TravelMap-Bridging.Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -634,6 +669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TravelMap-Bridging.Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -669,6 +705,22 @@
 			requirement = {
 				kind = exactVersion;
 				version = 5.0.0;
+			};
+		};
+		AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */ = {
@@ -734,6 +786,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		AF986BCB27363BF9004B1350 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		AF986BD22736C455004B1350 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 		AFB5670B272AD9A60021C6E5 /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;

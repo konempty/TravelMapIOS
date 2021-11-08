@@ -14,6 +14,7 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     var datas = [TrackingListData]()
     var selectIndex = 0
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         datas.count
@@ -36,6 +37,11 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +55,8 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
         let gesture = UITapGestureRecognizer(target: self, action: #selector(backFun))
         backBtn.isUserInteractionEnabled = true
         backBtn.addGestureRecognizer(gesture)
+
+
         loadTrackingData()
     }
 
@@ -99,6 +107,33 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
         }
         present(uvc, animated: true)
 
+    }
+
+    func showShareDialog() {
+        let data = datas[selectIndex]
+
+
+        let alertController = UIAlertController(title: nil, message: "'\(data.name)'을(를) 다른 사람들에게 공유하시겠습니까?", preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "예", style: .default) { [self] (_) -> Void in
+
+            let dialog1 = (ShowDialog("ShareSelectDialog") as! ShareSelectDialog)
+            dialog1.setOnOk { [self] in
+                let dialog2 = (ShowDialog("ShareProgressDialog") as! ShareProgressDialog)
+                dialog2.name = data.name
+                dialog2.trackingNum = data.trackingNum
+                dialog2.share = dialog1.shareSlectrion
+                dialog2.quality = dialog1.qualitySelection
+                dialog2.pswd = dialog1.pswd
+
+            }
+        }
+
+        let cancelAction = UIAlertAction(title: "아니요", style: .default)
+
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 
 }

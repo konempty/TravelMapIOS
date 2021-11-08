@@ -9,12 +9,13 @@ import UIKit
 import Photos
 import AVKit
 import DropDown
+import RealmSwift
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
 
     static var startIdx = 0
-    static var imageList: [PhotoData]!
+    static var imageList: [BaseData]!
     var onceOnly = false
     let dropDown = DropDown()
 
@@ -146,47 +147,55 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     @objc func menuFun() {
         let idx = photoCollectionView.indexPathsForVisibleItems[0].row
         let data = PhotoViewController.imageList[idx]
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetChangeRequest.deleteAssets([data.asset!] as NSArray)
-        }, completionHandler: { success, error in
-            if (success) {
-                DispatchQueue.main.async {
-                    if let index = ImageListViewController.imageList.firstIndex(of: data) {
+        if data is PhotoData {
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.deleteAssets([data.asset!] as NSArray)
+            }, completionHandler: { success, error in
+                if (success) {
+                    DispatchQueue.main.async {
+                        if let index = ImageListViewController.imageList.firstIndex(of: data) {
 
-                        ImageListViewController.imageList.remove(at: index)
-                    }
-                    if let index = PhotoService.imageList.firstIndex(of: data) {
-
-                        PhotoService.imageList.remove(at: index)
-                    }
-                    for key in PhotoService.imageListMap.keys {
-                        if let index = PhotoService.imageListMap[key]!.firstIndex(of: data) {
-
-                            PhotoService.imageListMap[key]!.remove(at: index)
-                            if (PhotoService.imageListMap[key]?.count == 0) {
-                                PhotoService.imageListMap.removeValue(forKey: key)
-                            }
-                            break
+                            ImageListViewController.imageList.remove(at: index)
                         }
-                    }
-                    for key in PhotoService.imageListDaily.keys {
-                        if let index = PhotoService.imageListDaily[key]!.firstIndex(of: data) {
+                        if let index = PhotoService.imageList.firstIndex(of: data as! PhotoData) {
 
-                            PhotoService.imageListDaily[key]!.remove(at: index)
-                            if (PhotoService.imageListDaily[key]?.count == 0) {
-                                PhotoService.imageListDaily.removeValue(forKey: key)
-                            }
-                            break
+                            PhotoService.imageList.remove(at: index)
                         }
+                        for key in PhotoService.imageListMap.keys {
+                            if let index = PhotoService.imageListMap[key]!.firstIndex(of: data as! PhotoData) {
+
+                                PhotoService.imageListMap[key]!.remove(at: index)
+                                if (PhotoService.imageListMap[key]?.count == 0) {
+                                    PhotoService.imageListMap.removeValue(forKey: key)
+                                }
+                                break
+                            }
+                        }
+                        for key in PhotoService.imageListDaily.keys {
+                            if let index = PhotoService.imageListDaily[key]!.firstIndex(of: data as! PhotoData) {
+
+                                PhotoService.imageListDaily[key]!.remove(at: index)
+                                if (PhotoService.imageListDaily[key]?.count == 0) {
+                                    PhotoService.imageListDaily.removeValue(forKey: key)
+                                }
+                                break
+                            }
+                        }
+                        PhotoService.refresh()
+                        (self.presentingViewController as! ImageListViewController).refresh()
+                        self.finish()
                     }
-                    PhotoService.refresh()
-                    (self.presentingViewController as! ImageListViewController).refresh()
-                    self.finish()
                 }
-            }
 
-        })
-
+            })
+        } else {
+            let realm = try! Realm()
+            let item = realm.object(ofType: EventData.self, forPrimaryKey: (data as! EventData).id)
+            try! realm.write({
+                realm.delete(item!)
+            })
+            TrackingMapViewController.instance.initCluster()
+        }
 
         //dropDown.show()
     }

@@ -107,9 +107,16 @@ class EventData: BaseData {
     @objc dynamic var id: Int64 = 0
     @objc dynamic var trackingNum = 0
     @objc dynamic var eventNum = 0
-    let pictureId = RealmOptional<Int64>()
+    @objc dynamic var pictureId: String?
     let trackingSpeed = RealmOptional<Int>()
     @objc dynamic var time: Date!
+
+    var latlng: CLLocationCoordinate2D {
+        get {
+            CLLocationCoordinate2D(latitude: lat.value!, longitude: lng.value!)
+        }
+    }
+
 
     convenience init(
             id: Int64,
@@ -117,7 +124,7 @@ class EventData: BaseData {
             eventNum: Int,
             lat: Double? = nil,
             lng: Double? = nil,
-            pictureId: Int64? = nil,
+            pictureId: String? = nil,
             name: String? = nil,
             path: String? = nil,
             isVideo: Bool? = nil,
@@ -128,7 +135,7 @@ class EventData: BaseData {
         self.id = id
         self.trackingNum = trackingNum
         self.eventNum = eventNum
-        self.pictureId.value = pictureId
+        self.pictureId = pictureId
         self.trackingSpeed.value = trackingSpeed
         self.time = time
         super.name = name
@@ -143,7 +150,14 @@ class EventData: BaseData {
         return "id"
     }
 
+    override var asset: PHAsset? {
+        get {
+            PHAsset.fetchAssets(withLocalIdentifiers: [pictureId!], options: nil)[0]
+        }
+        set {
 
+        }
+    }
     /*override val uri: Uri
         get() {
             val uri = if (isVideo == true) {

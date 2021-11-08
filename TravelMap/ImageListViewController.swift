@@ -12,7 +12,7 @@ class ImageListViewController: UIViewController, UICollectionViewDelegate, UICol
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var backBtn: UIImageView!
-    static var imageList: [PhotoData] = []
+    static var imageList: [BaseData] = []
     var viewMap = [UIImageView: PHAsset]()
 
 
