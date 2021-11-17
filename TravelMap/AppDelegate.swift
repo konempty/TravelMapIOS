@@ -14,6 +14,9 @@ import DropDown
 import CommonCrypto
 import Toast
 import Firebase
+import GoogleSignIn
+import FBSDKCoreKit
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyBoHTmxjR0r1V567C1-Uydp4w-MkNb1sGE")
+        FirebaseApp.configure()
         DropDown.startListeningToKeyboard()
         var style = ToastStyle()
 
@@ -36,7 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // or perhaps you want to use this style for all toasts going forward?
         // just set the shared style and there's no need to provide the style again
         ToastManager.shared.style = style
-        FirebaseConfiguration.shared.setLoggerLevel(.error)
+        GMSServices.provideAPIKey("AIzaSyBoHTmxjR0r1V567C1-Uydp4w-MkNb1sGE")
+        ApplicationDelegate.shared.application(
+                application,
+                didFinishLaunchingWithOptions: launchOptions
+        )
         sleep(2)
 
         return true
@@ -61,6 +68,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (!PhotoService.isRunning) {
             PhotoService()
         }
+    }
+
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any])
+                    -> Bool {
+        if url.scheme == "travelmap" {
+            let query = url.query
+            //S.shareNum=1;S.userID=1;S.nickname=test;S.id=1;
+            let data = SchemeData(query!)
+            let vc = window?.rootViewController as! MainViewController
+            vc.showSchemeVC(data)
+
+            return true
+        }
+        return GIDSignIn.sharedInstance.handle(url)
     }
 
 
@@ -91,8 +114,8 @@ extension UIView {
         gradient.startPoint = CGPoint(x: 0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1, y: 0.5)
         if (isRound) {
-            
-            gradient.cornerRadius = min(10,bounds.height/2)
+
+            gradient.cornerRadius = min(10, bounds.height / 2)
         }
         self.layer.insertSublayer(gradient, at: 0)
     }
@@ -145,6 +168,14 @@ class ToggleRoundButton: UIButton {
     }
 }
 
+class BorderView: UIView {
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.borderColor = UIColor(named: "dusk_light")?.cgColor
+        layer.borderWidth = 2.0
+    }
+}
+
 class BorderLabel: UILabel {
     open override func layoutSubviews() {
         super.layoutSubviews()
@@ -158,6 +189,17 @@ class BorderTextField: UITextField {
 
     open override func layoutSubviews() {
         super.layoutSubviews()
+        layer.borderColor = UIColor(named: "dusk_light")?.cgColor
+        layer.borderWidth = 2.0
+    }
+}
+
+class BorderButton: UIButton {
+
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        layer.cornerRadius = min(10, bounds.height / 2)
         layer.borderColor = UIColor(named: "dusk_light")?.cgColor
         layer.borderWidth = 2.0
     }
@@ -178,14 +220,15 @@ extension UIViewController {
         self.presentingViewController?.dismiss(animated: b, completion: nil)
     }
 
-    func ShowViewController(_ id: String) {
-        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: id) else {
-            return
-        }
-        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        present(uvc, animated: true)
+    @discardableResult
+    func ShowViewController(_ id: String) -> UIViewController {
+        let uvc = self.storyboard?.instantiateViewController(withIdentifier: id)
+        uvc!.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        present(uvc!, animated: true)
+        return uvc!
     }
 
+    @discardableResult
     func ShowDialog(_ id: String) -> UIViewController {
         let uvc = self.storyboard?.instantiateViewController(withIdentifier: id)
         uvc!.modalPresentationStyle = .overCurrentContext
@@ -194,14 +237,16 @@ extension UIViewController {
         return uvc!
     }
 
-    func sendRestRequest(url: String, params: Parameters?, isPost: Bool = true, response: @escaping (AFDataResponse<Any>) -> Void) {
 
-        let headers = HTTPHeaders()
-        //headers.add(name: Content-type, value: "application/json")
+    func showProgress() {
+        let progress = self.storyboard?.instantiateViewController(withIdentifier: "ProgressPopup") as! ProgressPopup
+        ProgressPopup.instance = progress
+        progress.modalPresentationStyle = .overCurrentContext
+        present(progress, animated: false)
+    }
 
-
-        let method = isPost ? HTTPMethod.post : HTTPMethod.get
-        AF.request("https://bmco.xyz/api/" + url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON(completionHandler: response)
+    func dismissProgress(_ completion: (() -> Void)? = nil) {
+        ProgressPopup.instance.dismiss(animated: false, completion: completion)
     }
 
 
@@ -462,5 +507,38 @@ extension PHAsset {
 extension NSLayoutConstraint {
     func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
         return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
+    }
+}
+
+extension UIAlertController {
+    func setStyle() {
+
+        view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor(named: "dark")
+        if let title = self.title {
+            let attributeString = NSMutableAttributedString(string: title, attributes: [.foregroundColor: UIColor.white, .font: UIFont(name: "BMJUAOTF", size: 20)])
+            setValue(attributeString, forKey: "attributedTitle")
+        }
+
+        if let message = self.message {
+            let attributeString = NSMutableAttributedString(string: message, attributes: [.foregroundColor: UIColor.white, .font: UIFont(name: "BMJUAOTF", size: 17)])
+            setValue(attributeString, forKey: "attributedMessage")
+        }
+        //view.tintColor = UIColor.white
+        for action in actions {
+            action.setStyle()
+        }
+
+    }
+}
+
+extension UIAlertAction {
+    func setStyle() {
+        if let title = self.title {
+            let attributeString = NSMutableAttributedString(string: title, attributes: [.foregroundColor: UIColor.white, .font: UIFont(name: "BMJUAOTF", size: 17)])
+            guard let label = (value(forKey: "__representer") as? NSObject)?.value(forKey: "label") as? UILabel else {
+                return
+            }
+            label.attributedText = attributeString
+        }
     }
 }

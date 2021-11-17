@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CLIENT_ID</key>
+        <string>377112735045-oldffi4q8es0levor8us8p902p4p5jcl.apps.googleusercontent.com</string>
+        <key>REVERSED_CLIENT_ID</key>
+        <string>com.googleusercontent.apps.377112735045-oldffi4q8es0levor8us8p902p4p5jcl</string>
+        <key>ANDROID_CLIENT_ID</key>
+        <string>377112735045-s86rpdubb71o4j7gugrn2h3ot1be9b5k.apps.googleusercontent.com</string>
+        <key>API_KEY</key>
+        <string>AIzaSyBoHTmxjR0r1V567C1-Uydp4w-MkNb1sGE</string>
+        <key>GCM_SENDER_ID</key>
+        <string>377112735045</string>
+        <key>PLIST_VERSION</key>
+        <string>1</string>
+        <key>BUNDLE_ID</key>
+        <string>kim.hanbin.TravelMapTemp2634</string>
+        <key>PROJECT_ID</key>
+        <string>gps-tracker-303405</string>
+        <key>STORAGE_BUCKET</key>
+        <string>gps-tracker-303405.appspot.com</string>
+        <key>IS_ADS_ENABLED</key>
+        <false></false>
+        <key>IS_ANALYTICS_ENABLED</key>
+        <false></false>
+        <key>IS_APPINVITE_ENABLED</key>
+        <true></true>
+        <key>IS_GCM_ENABLED</key>
+        <true></true>
+        <key>IS_SIGNIN_ENABLED</key>
+        <true></true>
+        <key>GOOGLE_APP_ID</key>
+        <string>1:377112735045:ios:4494a78e7557402512a22c</string>
+    </dict>
+</plist>

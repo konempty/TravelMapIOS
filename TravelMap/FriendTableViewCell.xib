@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BMJUA_otf.otf">
+            <string>BMJUAOTF</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableViewCell" id="KGk-i7-Jjw" customClass="FriendTableViewCell" customModule="TravelMap" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFW-CK-1My">
+                        <rect key="frame" x="10" y="13" width="43.5" height="18"/>
+                        <fontDescription key="fontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX3-0w-JCD">
+                        <rect key="frame" x="262" y="10" width="48" height="24"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="X">
+                            <fontDescription key="titleFontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="20"/>
+                        </buttonConfiguration>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtl-FG-kkn">
+                        <rect key="frame" x="204" y="10" width="48" height="24"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.66666666666666663" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="O">
+                            <fontDescription key="titleFontDescription" name="BMJUAOTF" family="BM JUA_OTF" pointSize="20"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jtl-FG-kkn" firstAttribute="width" secondItem="nX3-0w-JCD" secondAttribute="width" id="9eY-O2-QqQ"/>
+                    <constraint firstItem="iFW-CK-1My" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Al5-Vt-Kia"/>
+                    <constraint firstItem="nX3-0w-JCD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ICc-01-OSE"/>
+                    <constraint firstAttribute="bottom" secondItem="Jtl-FG-kkn" secondAttribute="bottom" constant="10" id="Iye-Cm-dh8"/>
+                    <constraint firstItem="iFW-CK-1My" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="KqR-nD-FNw"/>
+                    <constraint firstAttribute="bottom" secondItem="nX3-0w-JCD" secondAttribute="bottom" constant="10" id="dUD-NU-eJ7"/>
+                    <constraint firstItem="nX3-0w-JCD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.15" id="lVi-pa-OAQ"/>
+                    <constraint firstItem="nX3-0w-JCD" firstAttribute="leading" secondItem="Jtl-FG-kkn" secondAttribute="trailing" constant="10" id="ojp-7Q-NgS"/>
+                    <constraint firstItem="Jtl-FG-kkn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="t6C-yp-BKa"/>
+                    <constraint firstAttribute="trailing" secondItem="nX3-0w-JCD" secondAttribute="trailing" constant="10" id="uBY-yu-LVX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="acceptBtn" destination="Jtl-FG-kkn" id="urY-lX-Jkb"/>
+                <outlet property="deleteBtn" destination="nX3-0w-JCD" id="ESe-0Q-zvu"/>
+                <outlet property="nicknameLabel" destination="iFW-CK-1My" id="x7L-Ne-7be"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="56"/>
+        </tableViewCell>
+    </objects>
+</document>

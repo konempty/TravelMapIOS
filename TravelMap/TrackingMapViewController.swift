@@ -24,13 +24,13 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
     var isAuto = true
     var lastLoc: CLLocationCoordinate2D!
 
-    static var clusterList = [EventData]()
+    static var clusterList = [BaseData]()
 
 
     static var instance: TrackingMapViewController!
-    var bottomSheetVC: BottomSheetViewController!
     @IBOutlet weak var coverView: UIView!
     @IBOutlet weak var backBtn: WhiteImageView!
+    var bottomSheetVC: BottomSheetViewController!
     var clusterManager: GMUClusterManager!
     var mapView: GMSMapView!
     var isPause = true
@@ -59,7 +59,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         TrackingMapViewController.instance = self
 
-
+        centerMarker.icon = GMSMarker.markerImage(with: UIColor.blue)
         backBtn.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action: #selector(back(_:)))
         backBtn.addGestureRecognizer(gesture)
@@ -67,8 +67,12 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         addBottomSheetView()
 
         mapView = GMSMapView(frame: self.view.frame)
-
-        mapView.isUserInteractionEnabled = false
+        let setting = mapView.settings
+        setting.tiltGestures = false
+        setting.rotateGestures = false
+        setting.zoomGestures = false
+        setting.scrollGestures = false
+        setting.compassButton = false
 
         self.view.addSubview(mapView)
         self.view.sendSubviewToBack(mapView)
@@ -95,7 +99,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         goFoward()
     }
 
-    @objc func startFun() {
+    func startFun() {
         isPause = !isPause
         if (isStop) {
             //binding.startBtn.setImageResource(R.drawable.ic_baseline_pause_96)
@@ -133,6 +137,8 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
 
         cell.selectionStyle = .none
         cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "BMJUAOTF", size: 16)
+        cell.textLabel?.textColor = .white
 
         //drawDottedLine(start: CGPoint(x: 0, y: 0), end: CGPoint(x: cell.Separator.frame.width, y: 0), view: cell.Separator)
         //addDashedBottomBorder(cell)
@@ -153,13 +159,6 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         bottomSheetVC!.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
     }
 
-    func setList(_ json: [Dictionary<String, AnyObject>]) {
-        items.removeAll()
-        for obj in json {
-            //items.append(AdInfo(obj))
-        }
-        bottomSheetVC.tableView.reloadData()
-    }
 
     func addBottomSheetView() {
         // 1- Init bottomSheetVC
@@ -240,16 +239,18 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         DispatchQueue.global().async { [self] in
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy년 MM월 dd일"
-            var list = [String]()
             var dataList = [EventData]()
             let realm = try! Realm()
             eventList = Array(realm.objects(EventData.self).filter("trackingNum == \(trackingNum)"))
 
             for item in eventList {
+                let item = EventData(other: item)
                 switch (item.eventNum) {
                 case 0:
                     DispatchQueue.main.async {
                         let polyline = GMSPolyline(path: path)
+                        polyline.strokeColor = UIColor.black
+                        polyline.strokeWidth = 5.0
                         polyline.map = mapView
                         path = GMSMutablePath()
                     }
@@ -258,7 +259,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                 case 3:
                     lastLocIdx = trackingLogs.count
                     path.add(item.latlng)
-                    list.append(dateFormatter.string(from: item.time!))
+                    items.append(dateFormatter.string(from: item.time!))
                     dataList.append(item)
                     trackingLogs.append(item)
                     break;
@@ -283,6 +284,8 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
             DispatchQueue.main.async {
                 bottomSheetVC.tableView.reloadData()
                 let polyline = GMSPolyline(path: path)
+                polyline.strokeColor = UIColor.black
+                polyline.strokeWidth = 5.0
                 polyline.map = mapView
                 path = GMSMutablePath()
                 clusterManager.cluster()
@@ -509,6 +512,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                 lastLoc = item.latlng
                 centerMarker.map = nil
                 centerMarker = GMSMarker(position: item.latlng)
+                centerMarker.icon = GMSMarker.markerImage(with: UIColor.blue)
                 centerMarker.map = mapView
                 for idx in nextIdx..<trackingLogs.count {
                     if (trackingLogs[idx].eventNum == 3) {

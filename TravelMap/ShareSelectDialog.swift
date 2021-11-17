@@ -67,7 +67,7 @@ class ShareSelectDialog: UIViewController, UITextFieldDelegate {
         okBtn.isUserInteractionEnabled = true
         okBtn.addGestureRecognizer(gesture)
 
-        gesture = UITapGestureRecognizer(target: self, action: #selector(onClickOutsise(_:)))
+        gesture = UITapGestureRecognizer(target: self, action: #selector(onClickOutside))
         outside.isUserInteractionEnabled = true
         outside.addGestureRecognizer(gesture)
 
@@ -123,7 +123,7 @@ class ShareSelectDialog: UIViewController, UITextFieldDelegate {
         btn.toggle(true)
     }
 
-    @objc func onClickOutsise(_ sender: UITapGestureRecognizer) {
+    @objc func onClickOutside() {
         finish()
     }
 

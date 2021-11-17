@@ -193,8 +193,10 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
             }
             let cancelAction = UIAlertAction(title: "아니오", style: .default)
 
+
             alertController.addAction(settingsAction)
             alertController.addAction(cancelAction)
+            alertController.setStyle()
             self.present(alertController, animated: true, completion: nil)
 
         }
@@ -292,8 +294,10 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
                 }
                 let cancelAction = UIAlertAction(title: "아니오", style: .default)
 
+
                 alertController.addAction(cancelAction)
                 alertController.addAction(settingsAction)
+                alertController.setStyle()
                 self.present(alertController, animated: true, completion: nil)
                 break
             @unknown default:
@@ -303,7 +307,10 @@ class TrackingMenuViewController: UIViewController, CLLocationManagerDelegate {
             let alertController = UIAlertController(title: "GPS가 꺼져있습니다.", message: "GPS가 꺼져있습니다. GPS를 켠후 다시 시도해주세요.", preferredStyle: .alert)
 
             let settingsAction = UIAlertAction(title: "확인", style: .default)
+
+
             alertController.addAction(settingsAction)
+            alertController.setStyle()
             self.present(alertController, animated: true, completion: nil)
         }
         return false

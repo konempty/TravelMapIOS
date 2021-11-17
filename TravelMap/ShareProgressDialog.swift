@@ -9,12 +9,15 @@ import UIKit
 import Alamofire
 import Photos
 import RealmSwift
+import SwiftyJSON
 
 class ShareProgressDialog: UIViewController {
 
     @IBOutlet weak var msg: UILabel!
     @IBOutlet weak var totalView: UIView!
     @IBOutlet weak var cancelBtn: GradientButton!
+    @IBOutlet weak var progressLabel: UILabel!
+
     var trackingNum = 0
     let count = AtomicInteger(0)
     let sizes = [0.0, 1440, 960]
@@ -25,34 +28,40 @@ class ShareProgressDialog: UIViewController {
     var name = ""
     var compress = 0
     var pswd: String? = nil
+    var request: Request? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(cancelFun))
+        cancelBtn.isUserInteractionEnabled = true
+        cancelBtn.addGestureRecognizer(gesture)
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH-mm-ss"
 
 
         let directory = NSTemporaryDirectory()
-        let fileName = "compressedFile\(dateFormatter.string(from: Date()))" + (share != 2 ? ".json" : ".enc")
+        let letters = "0123456789"
+        let fileName = "compressedFile\(dateFormatter.string(from: Date()))\(String((0..<18).map { _ in letters.randomElement()! }))" + (share != 2 ? ".json" : ".enc")
 
 
         let fileURL = NSURL.fileURL(withPathComponents: [directory, fileName])!
         var outputStream: FileOutputStream
         var salt = [UInt8](repeating: 0, count: 32)
 
-        
+
         totalView.applyGradient(true)
         totalView.layer.sublayers![0].frame = CGRect(x: 0, y: 0, width: 0, height: totalView.frame.height)
 
         if (share != 2) {
             outputStream = FileOutputStream(url: fileURL)
         } else {
-            let status = SecRandomCopyBytes(kSecRandomDefault, salt.count, &salt)
+            _ = SecRandomCopyBytes(kSecRandomDefault, salt.count, &salt)
 
-            outputStream = AES256OutputStream(fileURL: fileURL, pswd: pswd!, salt: salt)
+            outputStream = AES256OutputStream(fileURL: fileURL, pswd: pswd!, salt: salt, isEncrypt: true)
         }
-        outputStream.write("[".bytes)
+        try! outputStream.write("[".bytes)
 
         var isComma = false
         DispatchQueue.global().async { [self] in
@@ -60,15 +69,17 @@ class ShareProgressDialog: UIViewController {
 
             let realm = try! Realm()
             let datas = Array(realm.objects(EventData.self).filter("trackingNum == \(trackingNum)").sorted(byKeyPath: "id"))
-            var total = AtomicInteger(Int64(datas.count))
+            let total = AtomicInteger(Int64(datas.count))
             for data in datas {
                 if (isStop) {
                     return
                 }
-                
+
                 let tmpCount = Double(count.incrementAndGet())
                 DispatchQueue.main.async { [self] in
-                    totalView.layer.sublayers![0].frame = CGRect(x: 0, y: 0, width: totalView.frame.width * CGFloat(tmpCount / Double(total.get())), height: totalView.frame.height)
+                    let progress = tmpCount / Double(total.get())
+                    totalView.layer.sublayers![0].frame = CGRect(x: 0, y: 0, width: totalView.frame.width * CGFloat(progress), height: totalView.frame.height)
+                    progressLabel.text = String(format: "%.1f%%", progress * 100)
                     print("total : \(total.get()) now : \(count.get())")
                 }
                 if (data.eventNum == 1 || data.eventNum == 2) {
@@ -125,56 +136,68 @@ class ShareProgressDialog: UIViewController {
                 }
 
                 if (isComma) {
-                    outputStream.write(",\n".bytes)
+                    try! outputStream.write(",\n".bytes)
                 }
                 isComma = true
                 let profileJson = try! JSONSerialization.data(withJSONObject: obj, options: .prettyPrinted)
 
-                outputStream.write(Array(profileJson))
+                try! outputStream.write(Array(profileJson))
 
 
             }
-            outputStream.write("]".bytes)
+            try! outputStream.write("]".bytes)
             outputStream.close()
-            if (true) {
-                finish()
-                return
-
+            DispatchQueue.main.async { [self] in
+                msg.text = "여행기록을 서버로 전송중입니다. 잠시만 기다려 주세요."
             }
-            AF.upload(
-                    multipartFormData: { multipartFormData in
-                        multipartFormData.append(fileURL, withName: "file", fileName: fileName, mimeType: "multipart/form-data")
-                        multipartFormData.append(Data(String(share).utf8), withName: "share")
-                        if (share == 2) {
-                            multipartFormData.append(Data(Data(salt).base64EncodedString(options: .lineLength64Characters).utf8), withName: "salt")
-                        }
-                        multipartFormData.append(Data(name.utf8), withName: "trackingName")
-                    }, to: "", method: .post
+            let multipartFormData: MultipartFormData = MultipartFormData()
+            multipartFormData.append(fileURL, withName: "file", fileName: fileName, mimeType: "multipart/form-data")
+            multipartFormData.append(String(share).data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "share")
+            if (share == 2) {
+                multipartFormData.append(Data(salt).base64EncodedData(options: .lineLength64Characters), withName: "salt")
+            }
+            multipartFormData.append((name.data(using: String.Encoding.utf8, allowLossyConversion: false)?.base64EncodedData(options: .lineLength64Characters))!, withName: "trackingName")
+            multipartFormData.append("true".data(using: String.Encoding.utf8, allowLossyConversion: false)!, withName: "isEncoded")
+            if (!isStop) {
+                request = AlamofireSession.uploadFile(url: "upload.do", multipartFormData: multipartFormData) { response in
+                    request = nil
+                    switch response.result {
+                    case .success(let value):
+                        let json = JSON(value as Any)
+                        if (json["success"].boolValue) {
 
-            ).responseJSON(completionHandler: { response in
-                guard let statusCode = response.response?.statusCode else {
-                    return
+                            print(json["result"].intValue)
+                            let realm = try! Realm()
+                            try? realm.write() {
+                                realm.add(TrackingInfo(id: trackingNum, userID: -1, trackingID: json["result"].int64Value, isFriendShare: share == 1))
+                            }
+                        } else {
+                            print(json["result"].stringValue)
+                            view.makeToast("문제가 발생했습니다. 잠시후 다시 시도해주세요.")
+                        }
+                        break;
+                    default:
+                        view.makeToast("문제가 발생했습니다. 잠시후 다시 시도해주세요.")
+                        break;
+                    }
+                    finish()
                 }
-
-                switch statusCode {
-
-                case 200:
-                    break;
-
-                default:
-                    if let responseJSON = try! response.result.get() as? [String: String] {
-
-                        if let error = responseJSON["error"] {
-
-
-                        }
+                request?.uploadProgress { progress in
+                    if (!isStop) {
+                        totalView.layer.sublayers![0].frame = CGRect(x: 0, y: 0, width: totalView.frame.width * CGFloat(progress.fractionCompleted), height: totalView.frame.height)
+                        progressLabel.text = String(format: "%.1f%%", progress.fractionCompleted * 100)
                     }
                 }
-            })
+            }
         }
 
 
     }
 
-
+    @objc func cancelFun() {
+        isStop = true
+        request?.cancel()
+        request = nil
+        finish()
+    }
 }

@@ -44,8 +44,8 @@ class ImageScrollViewController: UIViewController, UIScrollViewDelegate {
                         self.finish()
 
                     }
-
                     alertController.addAction(okAction)
+                    alertController.setStyle()
                     self.present(alertController, animated: true, completion: nil)
                 }
             }

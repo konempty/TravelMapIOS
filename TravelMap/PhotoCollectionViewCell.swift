@@ -48,7 +48,9 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 
                     }
 
+
                     alertController.addAction(okAction)
+                    alertController.setStyle()
                     //self.present(alertController, animated: true, completion: nil)
                 }
             }

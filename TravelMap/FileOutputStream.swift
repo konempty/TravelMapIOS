@@ -16,7 +16,7 @@ class FileOutputStream {
         Stream.open()
     }
 
-    @discardableResult func write(_ data: [UInt8], encoding: String.Encoding = .utf8, allowLossyConversion: Bool = false) -> Int {
+    @discardableResult func write(_ data: [UInt8], encoding: String.Encoding = .utf8, allowLossyConversion: Bool = false) throws -> Int {
 
         let data = Data(data)
         return data.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) -> Int in

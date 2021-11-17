@@ -76,17 +76,17 @@ class BottomSheetViewController: UIViewController {
 
         tableView.tableFooterView = UIView()
         btns = [speed1, speed2, speed5, speed10]
-        trackingMapVCInstance = (presentingViewController as! TrackingMapViewController)
+        trackingMapVCInstance = TrackingMapViewController.instance
 
-        var gesture = UITapGestureRecognizer(target: self, action: #selector(trackingMapVCInstance.startFun))
+        var gesture = UITapGestureRecognizer(target: self, action: #selector(startFun))
         startBtn.isUserInteractionEnabled = true
         startBtn.addGestureRecognizer(gesture)
 
-        gesture = UITapGestureRecognizer(target: self, action: #selector(trackingMapVCInstance.backwardFun))
+        gesture = UITapGestureRecognizer(target: self, action: #selector(backwardFun))
         backwardBtn.isUserInteractionEnabled = true
         backwardBtn.addGestureRecognizer(gesture)
 
-        gesture = UITapGestureRecognizer(target: self, action: #selector(trackingMapVCInstance.forwardFun))
+        gesture = UITapGestureRecognizer(target: self, action: #selector(forwardFun))
         forwardBtn.isUserInteractionEnabled = true
         forwardBtn.addGestureRecognizer(gesture)
 
@@ -98,6 +98,19 @@ class BottomSheetViewController: UIViewController {
         }
         ChangeBtn(0)
         fullView.isHidden = true
+    }
+
+    @objc func startFun() {
+        trackingMapVCInstance.startFun()
+    }
+
+
+    @objc func backwardFun() {
+        trackingMapVCInstance.backwardFun()
+    }
+
+    @objc func forwardFun() {
+        trackingMapVCInstance.forwardFun()
     }
 
     @objc func onBtn(_ sender: UITapGestureRecognizer) {

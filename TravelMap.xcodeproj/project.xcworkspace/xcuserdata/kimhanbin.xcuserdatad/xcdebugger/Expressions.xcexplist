@@ -79,6 +79,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in LoginViewController.twitterLoginFun():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(error.debugDescription)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
          <PersistentStrings>
             <PersistentString
@@ -101,13 +109,13 @@
          contextName = "closure #2 in closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
          <PersistentStrings>
             <PersistentString
-               value = "UIColor(named: &quot;dark_sky_blue_two&quot;)!">
-            </PersistentString>
-            <PersistentString
                value = "constraintToChange">
             </PersistentString>
             <PersistentString
                value = "UIColor(named: &quot;purpleish_blue&quot;)!.cgColor">
+            </PersistentString>
+            <PersistentString
+               value = "UIColor(named: &quot;dark_sky_blue_two&quot;)!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

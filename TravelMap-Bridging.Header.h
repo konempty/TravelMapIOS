@@ -9,6 +9,10 @@
 #define TravelMap_Bridging_Header_h
 
 #import <CommonCrypto/CommonCryptor.h>
+#import <NSObject+YAJL.h>
+#import <YAJLDocument.h>
+#import <YAJLGen.h>
+#import <YAJLParser.h>
 
 
 #endif /* TravelMap_Bridging_Header_h */

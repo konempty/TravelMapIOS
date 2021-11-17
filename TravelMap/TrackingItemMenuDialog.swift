@@ -16,11 +16,13 @@ class TrackingItemMenuDialog: UIViewController {
     @IBOutlet weak var deleteBtn: UIButton!
     @IBOutlet weak var renameBtn: UIButton!
     @IBOutlet weak var shareBtn: UIButton!
-    var name = ""
-    var trackingNum = 0
+    @IBOutlet weak var constrainDelete: NSLayoutConstraint!
+    @IBOutlet weak var constraintShare: NSLayoutConstraint!
+    var data: TrackingListData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         var gesture = UITapGestureRecognizer(target: self, action: #selector(onClickOutsise(_:)))
         outside.isUserInteractionEnabled = true
         outside.addGestureRecognizer(gesture)
@@ -36,14 +38,23 @@ class TrackingItemMenuDialog: UIViewController {
         gesture = UITapGestureRecognizer(target: self, action: #selector(shareFun(_:)))
         shareBtn.isUserInteractionEnabled = true
         shareBtn.addGestureRecognizer(gesture)
-        nameLabel.text = name
+        nameLabel.text = data.name
+        if (data.userID != nil && data!.userID! > -1) {
+            renameBtn.isHidden = true
+            shareBtn.isHidden = true
+            constraintShare.isActive = false
+
+
+        } else if (data.userID == -1) {
+            constrainDelete.isActive = false
+            shareBtn.setTitle("여행 공유 취소", for: .normal)
+        }
 
     }
 
 
-    func setData(name: String, trackingNum: Int) {
-        self.name = name
-        self.trackingNum = trackingNum
+    func setData(data: TrackingListData) {
+        self.data = data
     }
 
     @objc func onClickOutsise(_ sender: UITapGestureRecognizer) {
@@ -52,12 +63,12 @@ class TrackingItemMenuDialog: UIViewController {
 
     @objc func deleteFun(_ sender: UITapGestureRecognizer) {
 
-        let alertController = UIAlertController(title: nil, message: "정말로 '\(name)'을(를) 삭제 하시겠습니까?\n삭제후 복구는 불가능 합니다.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: nil, message: "정말로 '\(data.name)'을(를) 삭제 하시겠습니까?\n삭제후 복구는 불가능 합니다.", preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "예", style: .default) { (_) -> Void in
 
             let realm = try! Realm()
-            let data = realm.objects(EventData.self).filter("trackingNum == \(self.trackingNum)")
+            let data = realm.objects(EventData.self).filter("trackingNum == \(self.data.trackingNum)")
 
             try! realm.write({
                 realm.delete(data)
@@ -69,8 +80,10 @@ class TrackingItemMenuDialog: UIViewController {
 
         let cancelAction = UIAlertAction(title: "아니요", style: .default)
 
+
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
+        alertController.setStyle()
         self.present(alertController, animated: true, completion: nil)
 
     }

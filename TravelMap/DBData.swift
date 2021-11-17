@@ -117,6 +117,21 @@ class EventData: BaseData {
         }
     }
 
+    convenience init(other: EventData) {
+        self.init()
+        self.id = other.id
+        self.trackingNum = other.trackingNum
+        self.eventNum = other.eventNum
+        self.pictureId = other.pictureId
+        self.trackingSpeed.value = other.trackingSpeed.value
+        self.time = other.time
+        super.name = other.name
+        super.path = other.path
+        super.isVideo.value = other.isVideo.value
+        super.lat.value = other.lat.value
+        super.lng.value = other.lng.value
+    }
+
 
     convenience init(
             id: Int64,
@@ -179,23 +194,52 @@ class EventData: BaseData {
 
 }
 
+class TrackingInfo: Object {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var userID: Int64 = 0
+    @objc dynamic var trackingID: Int64 = 0
+    @objc dynamic var isFriendShare: Bool = false
+
+    convenience init(id: Int, userID: Int64, trackingID: Int64, isFriendShare: Bool) {
+        self.init()
+        self.id = id
+        self.userID = userID
+        self.trackingID = trackingID
+        self.isFriendShare = isFriendShare
+    }
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
+}
+
 class TrackingListData {
 
     let id: Int64
     let trackingNum: Int
     let name: String
+    let userID: Int64?
+    let trackingID: Int64?
+    let isFriendShare: Bool?
     let startTime: Date
     let endTime: Date
+
 
     init(
             id: Int64,
             trackingNum: Int,
             name: String,
+            userID: Int64? = nil,
+            trackingID: Int64? = nil,
+            isFriendShare: Bool? = nil,
             startTime: Date,
             endTime: Date) {
         self.id = id
         self.trackingNum = trackingNum
         self.name = name
+        self.userID = userID
+        self.trackingID = trackingID
+        self.isFriendShare = isFriendShare
         self.startTime = startTime
         self.endTime = endTime
     }

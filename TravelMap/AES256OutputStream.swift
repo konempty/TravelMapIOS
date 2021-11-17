@@ -11,27 +11,51 @@ import CryptoSwift
 //라이브러리 : https://github.com/krzyzanowskim/CryptoSwift
 //pod 'CryptoSwift', '~> 1.3.8'
 class AES256OutputStream: FileOutputStream {
-    var aesObject: AES!
+    //var aesObject: AES!
+    var writeFun: ((Array<UInt8>) throws -> [UInt8])!
+    var isNotInit = true
+    var isEncrypt = true
+    var keyDecodes: Array<UInt8>!
+    var last16bytes: Array<UInt8>!
 
-    init(fileURL: URL, pswd: String, salt: [UInt8]) {
+    init(fileURL: URL, pswd: String, salt: [UInt8], isEncrypt: Bool) {
         super.init(url: fileURL)
 
         let key = pbkdf2sha256(password: pswd, salt: Data(salt), keyByteCount: 32, rounds: 1000)
         let iv = "9362469649674046"
-        let keyDecodes: Array<UInt8> = [UInt8](key!)
-        let ivDecodes: Array<UInt8> = Array(iv.utf8)
-        aesObject = try! AES(key: keyDecodes, blockMode: CBC(iv: ivDecodes), padding: .pkcs7)
+        keyDecodes = [UInt8](key!)
+        last16bytes = Array(iv.utf8)
+        self.isEncrypt = isEncrypt
+
+        //aesObject = try! AES(key: keyDecodes, blockMode: CBC(iv: ivDecodes), padding: .pkcs7)
+        //writeFun = isEncrypt ? aesObject.encrypt : aesObject.decrypt
     }
 
-    func encrypt(_ data: Array<UInt8>) -> [UInt8] {
+    func crypt(_ data: Array<UInt8>) -> [UInt8] {
         guard !data.isEmpty else {
             return []
         }
-        return try! aesObject.encrypt(data)
+        let aesObject = try! AES(key: keyDecodes, blockMode: CBC(iv: last16bytes), padding: .pkcs7)
+        writeFun = isEncrypt ? aesObject.encrypt : aesObject.decrypt
+        let cryptedData = try! aesObject.decrypt(data)
+        last16bytes = isEncrypt ? cryptedData.suffix(16) : data.suffix(16)
+        return cryptedData
     }
 
-    override func write(_ data: [UInt8], encoding: String.Encoding = .utf8, allowLossyConversion: Bool = false) -> Int {
-        return super.write(encrypt(data), encoding: encoding, allowLossyConversion: allowLossyConversion)
+    enum MyError: Error {
+        case notDecrypted                      // 1
+    }
+
+    override func write(_ data: [UInt8], encoding: String.Encoding = .utf8, allowLossyConversion: Bool = false) throws -> Int {
+        let data = crypt(data)
+        if (!isEncrypt && isNotInit) {
+            let str = String(data: Data(data), encoding: .utf8)
+            if (str == nil || !str!.starts(with: "[{\"eventNum\":0")) {
+                throw MyError.notDecrypted
+            }
+            isNotInit = false
+        }
+        return try! super.write(data, encoding: encoding, allowLossyConversion: allowLossyConversion)
     }
 
 

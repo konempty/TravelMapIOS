@@ -55,6 +55,7 @@ class PhotoService {
                 let media = photo.value(forKey: "mediaType") as! Int
                 let loc = photo.location?.coordinate
 
+
                 let photoData = PhotoData(id: id, name: name, path: dir, isVideo: media == PHAssetMediaType.video.rawValue, modifyTime: date, isLoc: loc != nil, lat: loc?.latitude, lng: loc?.longitude)
 
                 date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: date)!

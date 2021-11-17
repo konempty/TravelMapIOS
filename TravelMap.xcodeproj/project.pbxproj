@@ -10,9 +10,35 @@
 		AF0AB673270FED7E0016D530 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AB672270FED7E0016D530 /* PhotoService.swift */; };
 		AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AB674270FEEDA0016D530 /* DBData.swift */; };
 		AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */; };
-		AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AF2847B7270DE331003C0B16 /* SwiftyJSON */; };
+		AF3F2D492744B0E3008C5666 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D482744B0E3008C5666 /* GoogleMaps */; };
+		AF3F2D4B2744B0E3008C5666 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D4A2744B0E3008C5666 /* GoogleMapsBase */; };
+		AF3F2D4D2744B0E3008C5666 /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D4C2744B0E3008C5666 /* GoogleMapsCore */; };
+		AF3F2D532744B124008C5666 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D522744B124008C5666 /* FacebookCore */; };
+		AF3F2D552744B124008C5666 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D542744B124008C5666 /* FacebookLogin */; };
+		AF3F2D582744B136008C5666 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D572744B136008C5666 /* GoogleSignIn */; };
+		AF3F2D5B2744B146008C5666 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D5A2744B146008C5666 /* Toast */; };
+		AF3F2D5E2744B158008C5666 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D5D2744B158008C5666 /* CryptoSwift */; };
+		AF3F2D612744B16E008C5666 /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D602744B16E008C5666 /* GoogleMapsUtils */; };
+		AF3F2D652744B2D6008C5666 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D642744B2D6008C5666 /* Alamofire */; };
+		AF3F2D682744B2EC008C5666 /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D672744B2EC008C5666 /* SwiftCoroutine */; };
+		AF3F2D6B2744B34C008C5666 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D6A2744B34C008C5666 /* FirebaseAuth */; };
+		AF3F2D732744B544008C5666 /* ImageScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D722744B544008C5666 /* ImageScrollView */; };
+		AF3F2D762744B5B8008C5666 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D752744B5B8008C5666 /* SwiftyJSON */; };
+		AF3F2D792744B7BC008C5666 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D782744B7BC008C5666 /* RealmSwift */; };
+		AF3F2D7C2744B85A008C5666 /* YAJLO in Frameworks */ = {isa = PBXBuildFile; productRef = AF3F2D7B2744B85A008C5666 /* YAJLO */; };
 		AF5E09B62713314700B964D8 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E09B52713314700B964D8 /* ImageListViewController.swift */; };
 		AF5E09C12713E66C00B964D8 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */; };
+		AF663B64273F641C00F1A258 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B63273F641C00F1A258 /* MenuViewController.swift */; };
+		AF663B66273FE77A00F1A258 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B65273FE77A00F1A258 /* FriendViewController.swift */; };
+		AF663B69273FEDD200F1A258 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B67273FEDD200F1A258 /* FriendTableViewCell.swift */; };
+		AF663B6A273FEDD200F1A258 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF663B68273FEDD200F1A258 /* FriendTableViewCell.xib */; };
+		AF663B6C273FEE6D00F1A258 /* FriendItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B6B273FEE6D00F1A258 /* FriendItem.swift */; };
+		AF663B6E2740059B00F1A258 /* AddFriendDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B6D2740059B00F1A258 /* AddFriendDialog.swift */; };
+		AF663B7227401E2E00F1A258 /* SchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B7127401E2E00F1A258 /* SchemeViewController.swift */; };
+		AF663B742740B6EF00F1A258 /* SchemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B732740B6EF00F1A258 /* SchemeData.swift */; };
+		AF663B7927421F5700F1A258 /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B7827421F5700F1A258 /* JsonData.swift */; };
+		AF663B7B2742261D00F1A258 /* PasswordDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B7A2742261D00F1A258 /* PasswordDialog.swift */; };
+		AF663B7D274228CF00F1A258 /* FileInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF663B7C274228CF00F1A258 /* FileInputStream.swift */; };
 		AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */; };
 		AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */; };
 		AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = AF69CBB2270EC82A00F92788 /* ic_launcher.png */; };
@@ -20,32 +46,26 @@
 		AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */; };
 		AF6AB216273238E2003E0E6B /* TrackingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */; };
 		AF6AB21A27323A91003E0E6B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */; };
+		AF6C8633273A662B00A65936 /* ProgressPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C8632273A662B00A65936 /* ProgressPopup.swift */; };
+		AF6C8635273A73EF00A65936 /* NicknameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C8634273A73EF00A65936 /* NicknameDialog.swift */; };
+		AF6C8637273A813F00A65936 /* LoginResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C8636273A813F00A65936 /* LoginResultProtocol.swift */; };
+		AF6C8639273AB44D00A65936 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF6C8638273AB44D00A65936 /* GoogleService-Info.plist */; };
+		AF6C863B273ACDA900A65936 /* AlamofireSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6C863A273ACDA900A65936 /* AlamofireSession.swift */; };
 		AF986BC4273584FB004B1350 /* ShareSelectDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */; };
 		AF986BC82735850F004B1350 /* ShareProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BC72735850F004B1350 /* ShareProgressDialog.swift */; };
-		AF986BCC27363BF9004B1350 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF986BCB27363BF9004B1350 /* CryptoSwift */; };
 		AF986BCE27363C69004B1350 /* AES256OutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BCD27363C69004B1350 /* AES256OutputStream.swift */; };
 		AF986BD0273657D4004B1350 /* FileOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF986BCF273657D4004B1350 /* FileOutputStream.swift */; };
-		AF986BD32736C455004B1350 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AF986BD22736C455004B1350 /* Toast */; };
 		AFA7307327141EB2001994C2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */; };
-		AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670B272AD9A60021C6E5 /* GoogleMaps */; };
-		AFB5670E272AD9A60021C6E5 /* GoogleMapsBase in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */; };
-		AFB56710272AD9A60021C6E5 /* GoogleMapsCore in Frameworks */ = {isa = PBXBuildFile; productRef = AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */; };
+		AFA9DF5B273978C40034F2DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9DF5A273978C40034F2DB /* LoginViewController.swift */; };
 		AFB56712272ADA070021C6E5 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */; };
-		AFB56715272ADE750021C6E5 /* GoogleMapsUtils in Frameworks */ = {isa = PBXBuildFile; productRef = AFB56714272ADE750021C6E5 /* GoogleMapsUtils */; };
 		AFB56717272AE9130021C6E5 /* CustomMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */; };
 		AFB56719272AEA9D0021C6E5 /* CustomMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */; };
-		AFB5674A272C40520021C6E5 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB56745272C3FC00021C6E5 /* DropDown.framework */; };
-		AFB5674B272C40520021C6E5 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFB56745272C3FC00021C6E5 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFB5674E272E42690021C6E5 /* TrackingItemMenuDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */; };
 		AFB56752272E4FAA0021C6E5 /* TrackingNameDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */; };
-		AFCD2BD12721015E00B2D40A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AFCD2BD02721015E00B2D40A /* RealmSwift */; };
 		AFCD2BD52721152200B2D40A /* MyPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD2BD42721152200B2D40A /* MyPreferences.swift */; };
 		AFD06CB12723CD02006122FA /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD06CB02723CD02006122FA /* AtomicInteger.swift */; };
-		AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */; };
-		AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F835270D4D6C001B1C5C /* Alamofire */; };
-		AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AFE0F838270D4E82001B1C5C /* FirebaseAuth */; };
 		AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */; };
-		AFEB1C5727107E1E008D26B4 /* ImageScrollView in Frameworks */ = {isa = PBXBuildFile; productRef = AFEB1C5627107E1E008D26B4 /* ImageScrollView */; };
+		B8DF709BAF2C02F697FB0F57 /* Pods_TravelMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECA50148A21940DBF556356 /* Pods_TravelMap.framework */; };
 		D0FF61CF5341C9D25B7573F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FF61419E9C5EF57382F5D6 /* Assets.xcassets */; };
 		D0FF627DEBFEA67969ED8701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FF6C5CE4381A4CCBD373A7 /* LaunchScreen.storyboard */; };
 		D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */; };
@@ -63,57 +83,25 @@
 		D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AFB56740272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A76440F1B676C2300BF1A2D;
-			remoteInfo = Demo;
-		};
-		AFB56742272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A7644241B676C2300BF1A2D;
-			remoteInfo = DropDownTests;
-		};
-		AFB56744272C3FC00021C6E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0AB5D8711D0EEECD002D3A17;
-			remoteInfo = DropDown;
-		};
-		AFB56746272C3FE30021C6E5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0AB5D8701D0EEECD002D3A17;
-			remoteInfo = DropDown;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AFB5674C272C40520021C6E5 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AFB5674B272C40520021C6E5 /* DropDown.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		0ECA50148A21940DBF556356 /* Pods_TravelMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94F39182AB8A9577901141F2 /* Pods-TravelMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelMap.release.xcconfig"; path = "Target Support Files/Pods-TravelMap/Pods-TravelMap.release.xcconfig"; sourceTree = "<group>"; };
 		AF0AB672270FED7E0016D530 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		AF0AB674270FEEDA0016D530 /* DBData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBData.swift; sourceTree = "<group>"; };
 		AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
 		AF5E09B52713314700B964D8 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
 		AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
+		AF663B63273F641C00F1A258 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		AF663B65273FE77A00F1A258 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		AF663B67273FEDD200F1A258 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		AF663B68273FEDD200F1A258 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		AF663B6B273FEE6D00F1A258 /* FriendItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItem.swift; sourceTree = "<group>"; };
+		AF663B6D2740059B00F1A258 /* AddFriendDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendDialog.swift; sourceTree = "<group>"; };
+		AF663B7127401E2E00F1A258 /* SchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeViewController.swift; sourceTree = "<group>"; };
+		AF663B732740B6EF00F1A258 /* SchemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeData.swift; sourceTree = "<group>"; };
+		AF663B7827421F5700F1A258 /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		AF663B7A2742261D00F1A258 /* PasswordDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDialog.swift; sourceTree = "<group>"; };
+		AF663B7C274228CF00F1A258 /* FileInputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileInputStream.swift; sourceTree = "<group>"; };
 		AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeReusableView.swift; sourceTree = "<group>"; };
 		AF69CBB2270EC82A00F92788 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -121,16 +109,21 @@
 		AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingListViewController.swift; sourceTree = "<group>"; };
 		AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMapViewController.swift; sourceTree = "<group>"; };
 		AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		AF6C8632273A662B00A65936 /* ProgressPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPopup.swift; sourceTree = "<group>"; };
+		AF6C8634273A73EF00A65936 /* NicknameDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameDialog.swift; sourceTree = "<group>"; };
+		AF6C8636273A813F00A65936 /* LoginResultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResultProtocol.swift; sourceTree = "<group>"; };
+		AF6C8638273AB44D00A65936 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF6C863A273ACDA900A65936 /* AlamofireSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSession.swift; sourceTree = "<group>"; };
 		AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectDialog.swift; sourceTree = "<group>"; };
 		AF986BC72735850F004B1350 /* ShareProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProgressDialog.swift; sourceTree = "<group>"; };
 		AF986BC9273639BD004B1350 /* TravelMap-Bridging.Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelMap-Bridging.Header.h"; sourceTree = "<group>"; };
 		AF986BCD27363C69004B1350 /* AES256OutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256OutputStream.swift; sourceTree = "<group>"; };
 		AF986BCF273657D4004B1350 /* FileOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileOutputStream.swift; sourceTree = "<group>"; };
 		AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFA9DF5A273978C40034F2DB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarkerView.swift; sourceTree = "<group>"; };
 		AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarkerView.xib; sourceTree = "<group>"; };
-		AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = DropDown/DropDown.xcodeproj; sourceTree = "<group>"; };
 		AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingItemMenuDialog.swift; sourceTree = "<group>"; };
 		AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingNameDialog.swift; sourceTree = "<group>"; };
 		AFCD2BD42721152200B2D40A /* MyPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPreferences.swift; sourceTree = "<group>"; };
@@ -153,6 +146,7 @@
 		D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0FF6DA4FF5CDF5F6FD9B46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0FF6E04A90A8DCAECCA74AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		DE8486D90F90CD62F2A54894 /* Pods-TravelMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelMap.debug.xcconfig"; path = "Target Support Files/Pods-TravelMap/Pods-TravelMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,38 +154,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCD2BD12721015E00B2D40A /* RealmSwift in Frameworks */,
-				AFE0F833270D4D1B001B1C5C /* SwiftCoroutine in Frameworks */,
-				AF986BD32736C455004B1350 /* Toast in Frameworks */,
-				AFE0F839270D4E82001B1C5C /* FirebaseAuth in Frameworks */,
-				AF2847B8270DE331003C0B16 /* SwiftyJSON in Frameworks */,
-				AFB56715272ADE750021C6E5 /* GoogleMapsUtils in Frameworks */,
-				AF986BCC27363BF9004B1350 /* CryptoSwift in Frameworks */,
-				AFB56710272AD9A60021C6E5 /* GoogleMapsCore in Frameworks */,
-				AFE0F836270D4D6C001B1C5C /* Alamofire in Frameworks */,
-				AFB5670C272AD9A60021C6E5 /* GoogleMaps in Frameworks */,
-				AFB5674A272C40520021C6E5 /* DropDown.framework in Frameworks */,
-				AFEB1C5727107E1E008D26B4 /* ImageScrollView in Frameworks */,
-				AFB5670E272AD9A60021C6E5 /* GoogleMapsBase in Frameworks */,
+				AF3F2D552744B124008C5666 /* FacebookLogin in Frameworks */,
+				AF3F2D6B2744B34C008C5666 /* FirebaseAuth in Frameworks */,
+				AF3F2D4D2744B0E3008C5666 /* GoogleMapsCore in Frameworks */,
+				AF3F2D762744B5B8008C5666 /* SwiftyJSON in Frameworks */,
+				AF3F2D532744B124008C5666 /* FacebookCore in Frameworks */,
+				B8DF709BAF2C02F697FB0F57 /* Pods_TravelMap.framework in Frameworks */,
+				AF3F2D612744B16E008C5666 /* GoogleMapsUtils in Frameworks */,
+				AF3F2D492744B0E3008C5666 /* GoogleMaps in Frameworks */,
+				AF3F2D792744B7BC008C5666 /* RealmSwift in Frameworks */,
+				AF3F2D5E2744B158008C5666 /* CryptoSwift in Frameworks */,
+				AF3F2D4B2744B0E3008C5666 /* GoogleMapsBase in Frameworks */,
+				AF3F2D7C2744B85A008C5666 /* YAJLO in Frameworks */,
+				AF3F2D5B2744B146008C5666 /* Toast in Frameworks */,
+				AF3F2D732744B544008C5666 /* ImageScrollView in Frameworks */,
+				AF3F2D582744B136008C5666 /* GoogleSignIn in Frameworks */,
+				AF3F2D652744B2D6008C5666 /* Alamofire in Frameworks */,
+				AF3F2D682744B2EC008C5666 /* SwiftCoroutine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AFB5673B272C3FC00021C6E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AFB56741272C3FC00021C6E5 /* Demo.app */,
-				AFB56743272C3FC00021C6E5 /* DropDownTests.xctest */,
-				AFB56745272C3FC00021C6E5 /* DropDown.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		AFB56748272C3FF80021C6E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0ECA50148A21940DBF556356 /* Pods_TravelMap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +188,10 @@
 		D0FF66134C63B78EF0FEB6A1 /* TravelMap */ = {
 			isa = PBXGroup;
 			children = (
+				AF663B6B273FEE6D00F1A258 /* FriendItem.swift */,
+				AF663B6D2740059B00F1A258 /* AddFriendDialog.swift */,
+				AF986BCD27363C69004B1350 /* AES256OutputStream.swift */,
+				AF6C863A273ACDA900A65936 /* AlamofireSession.swift */,
 				AF2847B2270DD0B7003C0B16 /* AlbumViewCell.swift */,
 				D0FF6340C551E55CBDE543D3 /* AlbumViewController.swift */,
 				D0FF6BFD31505FB70742BFC8 /* AppDelegate.swift */,
@@ -206,39 +199,52 @@
 				AFD06CB02723CD02006122FA /* AtomicInteger.swift */,
 				D0FF697CAF616812B00592D6 /* Base.lproj */,
 				D0FF6B5143E80CC347115857 /* BMJUA_otf.otf */,
+				AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */,
 				AFB56716272AE9130021C6E5 /* CustomMarkerView.swift */,
 				AFB56718272AEA9D0021C6E5 /* CustomMarkerView.xib */,
 				D0FF6B62093C2C424D3E9A56 /* DailyPhotoListViewController.swift */,
 				AF69CBB0270E9F5C00F92788 /* DateTimeReusableView.swift */,
 				AF0AB674270FEEDA0016D530 /* DBData.swift */,
+				AF986BCF273657D4004B1350 /* FileOutputStream.swift */,
+				AF663B67273FEDD200F1A258 /* FriendTableViewCell.swift */,
+				AF663B68273FEDD200F1A258 /* FriendTableViewCell.xib */,
+				AF663B65273FE77A00F1A258 /* FriendViewController.swift */,
 				AFB56711272ADA070021C6E5 /* GoogleMapViewController.swift */,
+				AF6C8638273AB44D00A65936 /* GoogleService-Info.plist */,
 				AF69CBB2270EC82A00F92788 /* ic_launcher.png */,
 				AF5E09B52713314700B964D8 /* ImageListViewController.swift */,
 				AF5E09C02713E66C00B964D8 /* ImageScrollViewController.swift */,
 				AF69CBAE270E9B3200F92788 /* ImageViewCell.swift */,
 				D0FF6E04A90A8DCAECCA74AF /* Info.plist */,
 				D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */,
+				AF6C8636273A813F00A65936 /* LoginResultProtocol.swift */,
+				AFA9DF5A273978C40034F2DB /* LoginViewController.swift */,
 				D0FF6D7FE5EBD90CA9AB1F9E /* Main.storyboard */,
 				D0FF63C8F400A32D5B72426F /* MainMapViewConroller.swift */,
 				D0FF6BF4D1C47202CEBB372E /* MainViewController.swift */,
+				AF663B63273F641C00F1A258 /* MenuViewController.swift */,
 				AFCD2BD42721152200B2D40A /* MyPreferences.swift */,
+				AF6C8634273A73EF00A65936 /* NicknameDialog.swift */,
 				AFA7307227141EB2001994C2 /* PhotoCollectionViewCell.swift */,
 				AF0AB672270FED7E0016D530 /* PhotoService.swift */,
 				AFEB1C5327107C68008D26B4 /* PhotoViewController.swift */,
+				AF6C8632273A662B00A65936 /* ProgressPopup.swift */,
 				D0FF61A112E355F64E89E77F /* SceneDelegate.swift */,
+				AF663B732740B6EF00F1A258 /* SchemeData.swift */,
+				AF663B7127401E2E00F1A258 /* SchemeViewController.swift */,
+				AF986BC72735850F004B1350 /* ShareProgressDialog.swift */,
+				AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */,
+				AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */,
 				AF69CBB4270EDBDA00F92788 /* TrackingListTableViewCell.swift */,
 				AF69CBB6270EDC5A00F92788 /* TrackingListViewController.swift */,
+				AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */,
 				D0FF6418EBF277AB76A5EED8 /* TrackingMenuViewController.swift */,
+				AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */,
 				D0FF6B0F201448343CD6C01A /* TravelMap.entitlements */,
 				D0FF6B3D32D3DAC8AEC1657C /* ViewController.swift */,
-				AFB5674D272E42690021C6E5 /* TrackingItemMenuDialog.swift */,
-				AFB56751272E4FAA0021C6E5 /* TrackingNameDialog.swift */,
-				AF6AB215273238E2003E0E6B /* TrackingMapViewController.swift */,
-				AF6AB21927323A91003E0E6B /* BottomSheetViewController.swift */,
-				AF986BC3273584FB004B1350 /* ShareSelectDialog.swift */,
-				AF986BC72735850F004B1350 /* ShareProgressDialog.swift */,
-				AF986BCD27363C69004B1350 /* AES256OutputStream.swift */,
-				AF986BCF273657D4004B1350 /* FileOutputStream.swift */,
+				AF663B7827421F5700F1A258 /* JsonData.swift */,
+				AF663B7A2742261D00F1A258 /* PasswordDialog.swift */,
+				AF663B7C274228CF00F1A258 /* FileInputStream.swift */,
 			);
 			path = TravelMap;
 			sourceTree = "<group>";
@@ -263,12 +269,21 @@
 		D0FF6F5D0BD6A98DC6CBC1CF = {
 			isa = PBXGroup;
 			children = (
-				AF986BC9273639BD004B1350 /* TravelMap-Bridging.Header.h */,
-				AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */,
+				AFB56748272C3FF80021C6E5 /* Frameworks */,
 				D0FF66EB06F69D7038A758B8 /* Products */,
 				D0FF66134C63B78EF0FEB6A1 /* TravelMap */,
-				AFB56748272C3FF80021C6E5 /* Frameworks */,
+				AF986BC9273639BD004B1350 /* TravelMap-Bridging.Header.h */,
+				F4482AECF3781906568960BE /* Pods */,
 			);
+			sourceTree = "<group>";
+		};
+		F4482AECF3781906568960BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE8486D90F90CD62F2A54894 /* Pods-TravelMap.debug.xcconfig */,
+				94F39182AB8A9577901141F2 /* Pods-TravelMap.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,30 +293,34 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0FF6B5D120D0C21D3CEA888 /* Build configuration list for PBXNativeTarget "TravelMap" */;
 			buildPhases = (
+				4307BB7F4D006999718ADD82 /* [CP] Check Pods Manifest.lock */,
 				D0FF6B1D1127AD4755F98713 /* Sources */,
 				D0FF64FD7889089663FD36BE /* Frameworks */,
 				D0FF6166AA3CC129489CDBC5 /* Resources */,
-				AFB5674C272C40520021C6E5 /* Embed Frameworks */,
+				A8364C9A32901E34D2285030 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AFB56747272C3FE30021C6E5 /* PBXTargetDependency */,
 			);
 			name = TravelMap;
 			packageProductDependencies = (
-				AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */,
-				AFE0F835270D4D6C001B1C5C /* Alamofire */,
-				AFE0F838270D4E82001B1C5C /* FirebaseAuth */,
-				AF2847B7270DE331003C0B16 /* SwiftyJSON */,
-				AFEB1C5627107E1E008D26B4 /* ImageScrollView */,
-				AFCD2BD02721015E00B2D40A /* RealmSwift */,
-				AFB5670B272AD9A60021C6E5 /* GoogleMaps */,
-				AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */,
-				AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */,
-				AFB56714272ADE750021C6E5 /* GoogleMapsUtils */,
-				AF986BCB27363BF9004B1350 /* CryptoSwift */,
-				AF986BD22736C455004B1350 /* Toast */,
+				AF3F2D482744B0E3008C5666 /* GoogleMaps */,
+				AF3F2D4A2744B0E3008C5666 /* GoogleMapsBase */,
+				AF3F2D4C2744B0E3008C5666 /* GoogleMapsCore */,
+				AF3F2D522744B124008C5666 /* FacebookCore */,
+				AF3F2D542744B124008C5666 /* FacebookLogin */,
+				AF3F2D572744B136008C5666 /* GoogleSignIn */,
+				AF3F2D5A2744B146008C5666 /* Toast */,
+				AF3F2D5D2744B158008C5666 /* CryptoSwift */,
+				AF3F2D602744B16E008C5666 /* GoogleMapsUtils */,
+				AF3F2D642744B2D6008C5666 /* Alamofire */,
+				AF3F2D672744B2EC008C5666 /* SwiftCoroutine */,
+				AF3F2D6A2744B34C008C5666 /* FirebaseAuth */,
+				AF3F2D722744B544008C5666 /* ImageScrollView */,
+				AF3F2D752744B5B8008C5666 /* SwiftyJSON */,
+				AF3F2D782744B7BC008C5666 /* RealmSwift */,
+				AF3F2D7B2744B85A008C5666 /* YAJLO */,
 			);
 			productName = TravelMap;
 			productReference = D0FF63B6ECBAE4D180CB72A0 /* TravelMap.app */;
@@ -325,55 +344,28 @@
 			);
 			mainGroup = D0FF6F5D0BD6A98DC6CBC1CF;
 			packageReferences = (
-				AFE0F831270D4D1B001B1C5C /* XCRemoteSwiftPackageReference "SwiftCoroutine" */,
-				AFE0F834270D4D6C001B1C5C /* XCRemoteSwiftPackageReference "Alamofire" */,
-				AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
-				AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */,
-				AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
-				AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
-				AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AF3F2D472744B0E3008C5666 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */,
+				AF3F2D512744B123008C5666 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				AF3F2D562744B135008C5666 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				AF3F2D592744B146008C5666 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				AF3F2D5C2744B158008C5666 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+				AF3F2D5F2744B16E008C5666 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
+				AF3F2D632744B2D6008C5666 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AF3F2D662744B2EC008C5666 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */,
+				AF3F2D692744B34C008C5666 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AF3F2D712744B544008C5666 /* XCRemoteSwiftPackageReference "ImageScrollView" */,
+				AF3F2D742744B5B7008C5666 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				AF3F2D772744B7BC008C5666 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				AF3F2D7A2744B85A008C5666 /* XCRemoteSwiftPackageReference "yajl-objc" */,
 			);
 			productRefGroup = D0FF66EB06F69D7038A758B8 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = AFB5673B272C3FC00021C6E5 /* Products */;
-					ProjectRef = AFB5673A272C3FC00021C6E5 /* DropDown.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D0FF6F226CC696961C92AA57 /* TravelMap */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		AFB56741272C3FC00021C6E5 /* Demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Demo.app;
-			remoteRef = AFB56740272C3FC00021C6E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AFB56743272C3FC00021C6E5 /* DropDownTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DropDownTests.xctest;
-			remoteRef = AFB56742272C3FC00021C6E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AFB56745272C3FC00021C6E5 /* DropDown.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DropDown.framework;
-			remoteRef = AFB56744272C3FC00021C6E5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D0FF6166AA3CC129489CDBC5 /* Resources */ = {
@@ -387,12 +379,57 @@
 				D0FF627DEBFEA67969ED8701 /* LaunchScreen.storyboard in Resources */,
 				AFB56719272AEA9D0021C6E5 /* CustomMarkerView.xib in Resources */,
 				D0FF6A98C94D43C6D6D06641 /* TravelMap.entitlements in Resources */,
+				AF6C8639273AB44D00A65936 /* GoogleService-Info.plist in Resources */,
 				D0FF6B9EEE417AEFA36F1C0B /* BMJUA_otf.otf in Resources */,
 				AF69CBB3270EC82B00F92788 /* ic_launcher.png in Resources */,
+				AF663B6A273FEDD200F1A258 /* FriendTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4307BB7F4D006999718ADD82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TravelMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8364C9A32901E34D2285030 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TravelMap/Pods-TravelMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TravelMap/Pods-TravelMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0FF6B1D1127AD4755F98713 /* Sources */ = {
@@ -400,48 +437,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF986BD0273657D4004B1350 /* FileOutputStream.swift in Sources */,
+				AF663B7927421F5700F1A258 /* JsonData.swift in Sources */,
 				AF6AB216273238E2003E0E6B /* TrackingMapViewController.swift in Sources */,
 				AF5E09B62713314700B964D8 /* ImageListViewController.swift in Sources */,
 				D0FF63CBC07EB3F052A9E4A4 /* AppDelegate.swift in Sources */,
 				AFB56717272AE9130021C6E5 /* CustomMarkerView.swift in Sources */,
 				AFCD2BD52721152200B2D40A /* MyPreferences.swift in Sources */,
 				AF986BC82735850F004B1350 /* ShareProgressDialog.swift in Sources */,
+				AF6C8635273A73EF00A65936 /* NicknameDialog.swift in Sources */,
 				D0FF64499A57687E47358BC4 /* SceneDelegate.swift in Sources */,
 				D0FF6F12FF4809D6F21C5EA2 /* ViewController.swift in Sources */,
 				AFB5674E272E42690021C6E5 /* TrackingItemMenuDialog.swift in Sources */,
+				AF663B6E2740059B00F1A258 /* AddFriendDialog.swift in Sources */,
 				AF69CBAF270E9B3200F92788 /* ImageViewCell.swift in Sources */,
 				AF986BC4273584FB004B1350 /* ShareSelectDialog.swift in Sources */,
+				AF6C8637273A813F00A65936 /* LoginResultProtocol.swift in Sources */,
+				AF663B7227401E2E00F1A258 /* SchemeViewController.swift in Sources */,
+				AFA9DF5B273978C40034F2DB /* LoginViewController.swift in Sources */,
 				AF69CBB5270EDBDA00F92788 /* TrackingListTableViewCell.swift in Sources */,
 				AFD06CB12723CD02006122FA /* AtomicInteger.swift in Sources */,
 				AF0AB675270FEEDA0016D530 /* DBData.swift in Sources */,
 				AFA7307327141EB2001994C2 /* PhotoCollectionViewCell.swift in Sources */,
 				D0FF6D893C9FC7468D976755 /* AlbumViewController.swift in Sources */,
 				AF0AB673270FED7E0016D530 /* PhotoService.swift in Sources */,
+				AF663B7D274228CF00F1A258 /* FileInputStream.swift in Sources */,
 				D0FF650BD16765F8400F1758 /* DailyPhotoListViewController.swift in Sources */,
+				AF663B66273FE77A00F1A258 /* FriendViewController.swift in Sources */,
 				D0FF640DD756F4C93623DE84 /* MainMapViewConroller.swift in Sources */,
 				AF69CBB1270E9F5C00F92788 /* DateTimeReusableView.swift in Sources */,
 				AF5E09C12713E66C00B964D8 /* ImageScrollViewController.swift in Sources */,
+				AF663B6C273FEE6D00F1A258 /* FriendItem.swift in Sources */,
+				AF663B742740B6EF00F1A258 /* SchemeData.swift in Sources */,
 				AF986BCE27363C69004B1350 /* AES256OutputStream.swift in Sources */,
+				AF6C8633273A662B00A65936 /* ProgressPopup.swift in Sources */,
 				AF6AB21A27323A91003E0E6B /* BottomSheetViewController.swift in Sources */,
 				D0FF6473FD17CE1B7F752BE0 /* MainViewController.swift in Sources */,
 				AF69CBB7270EDC5A00F92788 /* TrackingListViewController.swift in Sources */,
 				AFEB1C5427107C68008D26B4 /* PhotoViewController.swift in Sources */,
 				D0FF6899DDB26A19C78A3A0F /* TrackingMenuViewController.swift in Sources */,
+				AF663B69273FEDD200F1A258 /* FriendTableViewCell.swift in Sources */,
+				AF663B64273F641C00F1A258 /* MenuViewController.swift in Sources */,
 				AFB56752272E4FAA0021C6E5 /* TrackingNameDialog.swift in Sources */,
+				AF6C863B273ACDA900A65936 /* AlamofireSession.swift in Sources */,
+				AF663B7B2742261D00F1A258 /* PasswordDialog.swift in Sources */,
 				AFB56712272ADA070021C6E5 /* GoogleMapViewController.swift in Sources */,
 				AF2847B3270DD0B7003C0B16 /* AlbumViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AFB56747272C3FE30021C6E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DropDown;
-			targetProxy = AFB56746272C3FE30021C6E5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D0FF64379230BF1CBD13206C /* LaunchScreen.storyboard */ = {
@@ -481,6 +525,7 @@
 /* Begin XCBuildConfiguration section */
 		D0FF64F43F12BD0168E06DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE8486D90F90CD62F2A54894 /* Pods-TravelMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,8 +537,9 @@
 				INFOPLIST_FILE = TravelMap/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진쓰";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리 기능을 활성화 하기 위해선 사진접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -629,6 +675,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -638,6 +685,7 @@
 		};
 		D0FF6BD8CDE9293C0DFA3411 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F39182AB8A9577901141F2 /* Pods-TravelMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -649,8 +697,9 @@
 				INFOPLIST_FILE = TravelMap/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "여행기록을 하기 위해선 위치추적 권한이 필요합니다.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진쓰";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "갤러리 기능을 활성화 하기 위해선 사진접근 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -699,55 +748,63 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.0.0;
-			};
-		};
-		AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */ = {
+		AF3F2D472744B0E3008C5666 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/YAtechnologies/GoogleMaps-SP.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		AF3F2D512744B123008C5666 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 9.3.0;
+			};
+		};
+		AF3F2D562744B135008C5666 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		AF3F2D592744B146008C5666 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
 				minimumVersion = 5.0.0;
 			};
 		};
-		AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
+		AF3F2D5C2744B158008C5666 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		AF3F2D5F2744B16E008C5666 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googlemaps/google-maps-ios-utils.git";
 			requirement = {
-				kind = upToNextMajorVersion;
+				kind = upToNextMinorVersion;
 				minimumVersion = 4.0.0;
 			};
 		};
-		AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		AF3F2D632744B2D6008C5666 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.0;
 			};
 		};
-		AFE0F831270D4D1B001B1C5C /* XCRemoteSwiftPackageReference "SwiftCoroutine" */ = {
+		AF3F2D662744B2EC008C5666 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/belozierov/SwiftCoroutine.git";
 			requirement = {
@@ -755,92 +812,128 @@
 				minimumVersion = 2.1.0;
 			};
 		};
-		AFE0F834270D4D6C001B1C5C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		AF3F2D692744B34C008C5666 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 8.9.0;
 			};
 		};
-		AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */ = {
+		AF3F2D712744B544008C5666 /* XCRemoteSwiftPackageReference "ImageScrollView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/huynguyencong/ImageScrollView.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+		AF3F2D742744B5B7008C5666 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		AF3F2D772744B7BC008C5666 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.5.1;
+			};
+		};
+		AF3F2D7A2744B85A008C5666 /* XCRemoteSwiftPackageReference "yajl-objc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gabriel/yajl-objc.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.3.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AF2847B7270DE331003C0B16 /* SwiftyJSON */ = {
+		AF3F2D482744B0E3008C5666 /* GoogleMaps */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AF2847B6270DE331003C0B16 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-		AF986BCB27363BF9004B1350 /* CryptoSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF986BCA27363BF9004B1350 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
-			productName = CryptoSwift;
-		};
-		AF986BD22736C455004B1350 /* Toast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF986BD12736C455004B1350 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
-			productName = Toast;
-		};
-		AFB5670B272AD9A60021C6E5 /* GoogleMaps */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			package = AF3F2D472744B0E3008C5666 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
 			productName = GoogleMaps;
 		};
-		AFB5670D272AD9A60021C6E5 /* GoogleMapsBase */ = {
+		AF3F2D4A2744B0E3008C5666 /* GoogleMapsBase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			package = AF3F2D472744B0E3008C5666 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
 			productName = GoogleMapsBase;
 		};
-		AFB5670F272AD9A60021C6E5 /* GoogleMapsCore */ = {
+		AF3F2D4C2744B0E3008C5666 /* GoogleMapsCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFB5670A272AD9A60021C6E5 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
+			package = AF3F2D472744B0E3008C5666 /* XCRemoteSwiftPackageReference "GoogleMaps-SP" */;
 			productName = GoogleMapsCore;
 		};
-		AFB56714272ADE750021C6E5 /* GoogleMapsUtils */ = {
+		AF3F2D522744B124008C5666 /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFB56713272ADE750021C6E5 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */;
+			package = AF3F2D512744B123008C5666 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		AF3F2D542744B124008C5666 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D512744B123008C5666 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		AF3F2D572744B136008C5666 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D562744B135008C5666 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		AF3F2D5A2744B146008C5666 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D592744B146008C5666 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		AF3F2D5D2744B158008C5666 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D5C2744B158008C5666 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+		AF3F2D602744B16E008C5666 /* GoogleMapsUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D5F2744B16E008C5666 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */;
 			productName = GoogleMapsUtils;
 		};
-		AFCD2BD02721015E00B2D40A /* RealmSwift */ = {
+		AF3F2D642744B2D6008C5666 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFCD2BCF2721015E00B2D40A /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
-		};
-		AFE0F832270D4D1B001B1C5C /* SwiftCoroutine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AFE0F831270D4D1B001B1C5C /* XCRemoteSwiftPackageReference "SwiftCoroutine" */;
-			productName = SwiftCoroutine;
-		};
-		AFE0F835270D4D6C001B1C5C /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AFE0F834270D4D6C001B1C5C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = AF3F2D632744B2D6008C5666 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		AFE0F838270D4E82001B1C5C /* FirebaseAuth */ = {
+		AF3F2D672744B2EC008C5666 /* SwiftCoroutine */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFE0F837270D4E82001B1C5C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = AF3F2D662744B2EC008C5666 /* XCRemoteSwiftPackageReference "SwiftCoroutine" */;
+			productName = SwiftCoroutine;
+		};
+		AF3F2D6A2744B34C008C5666 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D692744B34C008C5666 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		AFEB1C5627107E1E008D26B4 /* ImageScrollView */ = {
+		AF3F2D722744B544008C5666 /* ImageScrollView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFEB1C5527107E1E008D26B4 /* XCRemoteSwiftPackageReference "ImageScrollView" */;
+			package = AF3F2D712744B544008C5666 /* XCRemoteSwiftPackageReference "ImageScrollView" */;
 			productName = ImageScrollView;
+		};
+		AF3F2D752744B5B8008C5666 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D742744B5B7008C5666 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		AF3F2D782744B7BC008C5666 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D772744B7BC008C5666 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		AF3F2D7B2744B85A008C5666 /* YAJLO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3F2D7A2744B85A008C5666 /* XCRemoteSwiftPackageReference "yajl-objc" */;
+			productName = YAJLO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

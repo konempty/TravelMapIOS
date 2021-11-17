@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in closure #1 in TrackingListViewController.loginAndSendData():TrackingListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: value, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SchemeViewController.parserDidEndDictionary(_:):SchemeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jsonData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MenuViewController.logout():MenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: value, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TrackingListViewController.loginAndSendData():TrackingListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error.debugDescription">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RoutingViewController.viewDidLoad():RoutingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppDelegate.isStartByScheme">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in MenuViewController.loginProcess():MenuViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UIAlertController.setStyle():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.value(forKey: &quot;cancelAction&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AES256OutputStream.write(_:encoding:allowLossyConversion:):AES256OutputStream.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data:Data(data),encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in TrackingListViewController.loginAndSendData():TrackingListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(error.debugDescription)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in MenuViewController.viewDidLoad():MenuViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "&#10;                            String(data: value!, encoding: .utf8)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static AlamofireSession.sendRestRequestJson(url:params:isPost:response:):AlamofireSession.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "JSONEncoding.default.encode(request, with: params)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FriendTableViewCell.setData(data:isFriendList:):FriendTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "data.nickname.bytes">
+            </PersistentString>
+            <PersistentString
+               value = "backgroundColor">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SchemeData.init(_:):SchemeData.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(tmp[1])">
+            </PersistentString>
+            <PersistentString
+               value = "trackingName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized closure #1 in ShareProgressDialog.viewDidLoad():ShareProgressDialog.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "name.data(using: String.Encoding.utf8, allowLossyConversion: false)!">
+            </PersistentString>
+            <PersistentString
+               value = "name.bytes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SchemeViewController.parse(_:):SchemeViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SchemeViewController.viewDidLoad():SchemeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Array(try! Realm().objects(TrackingInfo.self).filter(&quot;trackingID == \(data.id)&quot;))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AddFriendDialog.okFun(_:):AddFriendDialog.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "String(data: response.data!, encoding: .utf8)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SchemeViewController.parser(_:didMapKey:):SchemeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "list">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static AlamofireSession.sendRestRequest(url:params:isPost:response:):AlamofireSession.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.twitterLoginFun():LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.loginProcess(_:):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.facebookLoginFun():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(error.debugDescription)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:open:options:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url.scheme">
+            </PersistentString>
+            <PersistentString
+               value = "String(tmp[0])">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in SchemeViewController.parser(_:didAdd:):SchemeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jsonData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SchemeViewController.parserDidEndArray(_:):SchemeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Array(try! Realm().objects(TrackingInfo.self).filter(&quot;trackingID == \(data.id)&quot;))">
+            </PersistentString>
+            <PersistentString
+               value = "list">
+            </PersistentString>
+            <PersistentString
+               value = "Array(try! Realm().objects(TrackingInfo.self))">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
