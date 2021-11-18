@@ -138,6 +138,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in TrackingMapViewController.resumeAnimation():TrackingMapViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UInt32(time * 1000)">
+            </PersistentString>
+            <PersistentString
+               value = "UInt32(speed)">
+            </PersistentString>
+            <PersistentString
+               value = "UInt32(time * 1000) - 500000 / UInt32(speed)">
+            </PersistentString>
+            <PersistentString
+               value = "500000 / UInt32(speed)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SchemeViewController.parser(_:didMapKey:):SchemeViewController.swift">
          <PersistentStrings>
             <PersistentString

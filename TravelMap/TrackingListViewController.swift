@@ -93,7 +93,7 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
             let touchPoint = sender.location(in: tableView)
             if let indexPath = tableView.indexPathForRow(at: touchPoint) {
                 selectIndex = indexPath.row
-                let data = datas[selectIndex]
+                data = datas[selectIndex]
                 /*let uvc = self.storyboard?.instantiateViewController(withIdentifier: "TrackingItemMenuDia") as! TrackingItemMenuDialog
                 uvc.modalPresentationStyle = .overCurrentContext
                 uvc.setData(data: data)
@@ -194,8 +194,8 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
 
                     }
                     let action3 = UIAlertAction(title: (data.userID == -1) ? "여행 공유 취소" : "여행 공유", style: .default) { (_) -> Void in
-                        if (data.userID == -1) {
-                            let alertController = UIAlertController(title: nil, message: "'\(data.name)'을(를) 공유취소 하시겠습니까?", preferredStyle: .alert)
+                        if (self.data.userID == -1) {
+                            let alertController = UIAlertController(title: nil, message: "'\(self.data.name)'을(를) 공유취소 하시겠습니까?", preferredStyle: .alert)
 
                             let okAction = UIAlertAction(title: "예", style: .default) { [self] (_) in
                                 showProgress()
@@ -256,6 +256,8 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
                                 }
 
                             }
+
+
                             let cancelAction = UIAlertAction(title: "아니요", style: .default)
 
 
@@ -272,6 +274,20 @@ class TrackingListViewController: UIViewController, UITableViewDelegate, UITable
                     }
                     alertController.addAction(action2)
                     alertController.addAction(action3)
+                }
+                if (data.trackingID != nil) {
+                    let action4 = UIAlertAction(title: "여행 공유 링크 가져오기", style: .default) { (_) -> Void in
+                        let textToShare = ["https://119.69.202.23/browse.do?id=\(self.data.trackingID!)"]
+                        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+                        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+                        // exclude some activity types from the list (optional)
+                        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook]
+
+                        // present the view controller
+                        self.present(activityViewController, animated: true, completion: nil)
+                    }
+                    alertController.addAction(action4)
                 }
 
 

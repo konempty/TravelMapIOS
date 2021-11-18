@@ -102,15 +102,15 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
     func startFun() {
         isPause = !isPause
         if (isStop) {
-            //binding.startBtn.setImageResource(R.drawable.ic_baseline_pause_96)
+            bottomSheetVC.startBtn.image = UIImage(named: "pause")
             isStop = false
             getStartPoint()
             nextTracking()
         } else if (isPause) {
-            //binding.startBtn.setImageResource(R.drawable.ic_baseline_play_arrow_96)
+            bottomSheetVC.startBtn.image = UIImage(named: "start Btn")
             pauseAnimation()
         } else {
-            //binding.startBtn.setImageResource(R.drawable.ic_baseline_pause_96)
+            bottomSheetVC.startBtn.image = UIImage(named: "pause")
             resumeAnimation()
         }
     }
@@ -299,7 +299,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         if (nextIdx == trackingLogs.count) {
             isStop = true
             isPause = true
-            bottomSheetVC.startBtn.image = UIImage(named: "delete")
+            bottomSheetVC.startBtn.image = UIImage(named: "start Btn")
             isAccuratePoint = true
             return
         }
@@ -325,9 +325,9 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                                     item.latlng.latitude,
                                     item.latlng.longitude
                             )
-                            CATransaction.begin()
-                            CATransaction.setDisableActions(true)
-                            CATransaction.setAnimationDuration(1.0 / Double(speed))
+                            //  CATransaction.begin()
+                            //   CATransaction.setDisableActions(true)
+                            //    CATransaction.setAnimationDuration(1.0 / Double(speed))
                             mapView.animate(to: GMSCameraPosition.camera(
                                     withLatitude: lastLoc.latitude,
                                     longitude: lastLoc.longitude,
@@ -335,7 +335,7 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                                     bearing: angle, viewingAngle: 90.0
 
                             ))
-                            CATransaction.commit()
+                            //    CATransaction.commit()
                             usleep(useconds_t(500000 / speed))
                         }
                         cameraPosition = GMSCameraPosition.camera(
@@ -353,15 +353,16 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                     } else {
                         animateTime = Double(3 / speed)
                     }
-                    CATransaction.begin()
-                    CATransaction.setDisableActions(true)
-                    CATransaction.setAnimationDuration(animateTime)
+                    //CATransaction.begin()
+                    //CATransaction.setDisableActions(true)
+                    //CATransaction.setValue(animateTime, forKey: kCATransactionAnimationDuration)
+                    //CATransaction.setAnimationDuration(animateTime)
                     mapView.animate(to: cameraPosition)
-                    CATransaction.setCompletionBlock({
+                    /*CATransaction.setCompletionBlock({
                         lastLoc = item.latlng
                         nextTracking()
                     })
-                    CATransaction.commit()
+                   CATransaction.commit()*/
                 }
             }
 
@@ -374,6 +375,12 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
         default:
             break;
         }
+    }
+
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        centerMarker.position = mapView.camera.target
+        lastLoc = mapView.camera.target
+        nextTracking()
     }
 
     func goFoward() {
@@ -637,28 +644,28 @@ class TrackingMapViewController: UIViewController, UITableViewDelegate, UITableV
                     ratio -= 0.5
                     let time = ratio / 0.5 / Double(speed)
 
-                    CATransaction.begin()
-                    CATransaction.setDisableActions(true)
-                    CATransaction.setAnimationDuration(time)
+                    //CATransaction.begin()
+                    // CATransaction.setDisableActions(true)
+                    //  CATransaction.setAnimationDuration(time)
                     mapView.animate(to: GMSCameraPosition.camera(withLatitude: mapView.camera.target.latitude, longitude: mapView.camera.target.longitude, zoom: zoomLevels[zoomlevel],
                             bearing: angle, viewingAngle: 90.0))
 
-                    CATransaction.commit()
+                    //  CATransaction.commit()
 
-                    usleep(UInt32(time * 1000) - 500000 / UInt32(speed))
+                    usleep(UInt32(time * 1000000) - 500000 / UInt32(speed))
                 } else {
                     animateTime = max(Double(animateTime) * currDist / orgDist / 0.5, 1.0)
                 }
-                CATransaction.begin()
-                CATransaction.setDisableActions(true)
-                CATransaction.setAnimationDuration(animateTime)
+                // CATransaction.begin()
+                //  CATransaction.setDisableActions(true)
+                //  CATransaction.setAnimationDuration(animateTime)
                 mapView.animate(to: GMSCameraPosition.camera(withLatitude: destLoc!.latitude, longitude: destLoc!.longitude, zoom: zoomLevels[zoomlevel],
                         bearing: angle, viewingAngle: 90.0))
-                CATransaction.setCompletionBlock({
-                    lastLoc = destLoc
-                    nextTracking()
-                })
-                CATransaction.commit()
+                //   CATransaction.setCompletionBlock({
+                //      lastLoc = destLoc
+                //       nextTracking()
+                //   })
+                //   CATransaction.commit()
 
             }
         }

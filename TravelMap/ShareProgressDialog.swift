@@ -181,6 +181,7 @@ class ShareProgressDialog: UIViewController {
                         break;
                     }
                     finish()
+                    (presentingViewController as! TrackingListViewController).loadTrackingData()
                 }
                 request?.uploadProgress { progress in
                     if (!isStop) {
